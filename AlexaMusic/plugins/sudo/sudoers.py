@@ -1,15 +1,3 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
-
-""""
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
-
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -31,7 +19,7 @@ SUDOUSERS_COMMAND = get_command("SUDOUSERS_COMMAND")
 async def useradd(client, message: Message, _):
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**ᴅᴜᴇ ᴛᴏ {MUSIC_BOT_NAME}'s ᴩʀɪᴠᴀᴄʏ ɪssᴜᴇs, ʏᴏᴜ ᴄᴀɴ'ᴛ ᴍᴀɴᴀɢᴇ sᴜᴅᴏ ᴜsᴇʀs ᴏɴ {MUSIC_BOT_NAME} ᴅᴀᴛᴀʙᴀsᴇ.\n\n ᴩʟᴇᴀsᴇ ᴀᴅᴅ ʏᴏᴜʀ ᴍᴏɴɢᴏ ᴅᴀᴛᴀʙᴀsᴇ ɪɴ ᴠᴀʀs ᴛᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ.**"
+            "**{MUSIC_BOT_NAME} Gizlilik Sorunları Nedeniyle {MUSIC_BOT_NAME} Veritabanındaki Sudo Kullanıcılarını Yönetemezsiniz‌‌.\n\nBu Özelliği Kullanmak İçin Lütfen Mongo Veritabanınızı Vars'a Ekleyin‌‌**"
         )
     if not message.reply_to_message:
         if len(message.command) != 2:
@@ -47,7 +35,7 @@ async def useradd(client, message: Message, _):
             SUDOERS.add(user.id)
             await message.reply_text(_["sudo_2"].format(user.mention))
         else:
-            await message.reply_text("ғᴀɪʟᴇᴅ.")
+            await message.reply_text("Arızalı.")
         return
     if message.reply_to_message.from_user.id in SUDOERS:
         return await message.reply_text(
@@ -60,7 +48,7 @@ async def useradd(client, message: Message, _):
             _["sudo_2"].format(message.reply_to_message.from_user.mention)
         )
     else:
-        await message.reply_text("ғᴀɪʟᴇᴅ.")
+        await message.reply_text("Arızalı.")
     return
 
 
@@ -69,7 +57,7 @@ async def useradd(client, message: Message, _):
 async def userdel(client, message: Message, _):
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**ᴅᴜᴇ ᴛᴏ {MUSIC_BOT_NAME}'s ᴩʀɪᴠᴀᴄʏ ɪssᴜᴇs, ʏᴏᴜ ᴄᴀɴ'ᴛ ᴍᴀɴᴀɢᴇ sᴜᴅᴏ ᴜsᴇʀs ᴏɴ {MUSIC_BOT_NAME} ᴅᴀᴛᴀʙᴀsᴇ.\n\n ᴩʟᴇᴀsᴇ ᴀᴅᴅ ʏᴏᴜʀ ᴍᴏɴɢᴏ ᴅᴀᴛᴀʙᴀsᴇ ɪɴ ᴠᴀʀs ᴛᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ.**"
+            "**{MUSIC_BOT_NAME} Gizlilik Sorunları Nedeniyle {MUSIC_BOT_NAME} Veritabanındaki Sudo Kullanıcılarını Yönetemezsiniz‌‌.\n\nBu Özelliği Kullanmak İçin Lütfen Mongo Veritabanınızı Vars'a Ekleyin‌‌**"
         )
     if not message.reply_to_message:
         if len(message.command) != 2:
@@ -85,7 +73,7 @@ async def userdel(client, message: Message, _):
             SUDOERS.remove(user.id)
             await message.reply_text(_["sudo_4"])
             return
-        await message.reply_text(f"Something wrong happened.")
+        await message.reply_text(f"Yanlış Bir Şey Oldu.")
         return
     user_id = message.reply_to_message.from_user.id
     if user_id not in SUDOERS:
@@ -95,20 +83,28 @@ async def userdel(client, message: Message, _):
         SUDOERS.remove(user_id)
         await message.reply_text(_["sudo_4"])
         return
-    await message.reply_text(f"sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ.")
+    await message.reply_text(f"Bir Şeyler Ters Gitti.")
 
 
 @app.on_message(filters.command(SUDOUSERS_COMMAND) & ~BANNED_USERS)
 @language
 async def sudoers_list(client, message: Message, _):
     text = _["sudo_5"]
-    user = await app.get_users(OWNER_ID)
+
+    # Ensure OWNER_ID is always treated as a list
+    owner_ids = [OWNER_ID] if isinstance(OWNER_ID, int) else OWNER_ID
+
+    # Retrieve owner info
+    user = await app.get_users(owner_ids[0])
     user = user.first_name if not user.mention else user.mention
-    text += f"1➤ {user}\n"
+    text += f"➥ {user}\n"
+
     count = 0
     smex = 0
+
+    # Loop through SUDOERS list
     for user_id in SUDOERS:
-        if user_id not in OWNER_ID:
+        if user_id not in owner_ids:
             try:
                 user = await app.get_users(user_id)
                 user = user.first_name if not user.mention else user.mention
@@ -116,9 +112,11 @@ async def sudoers_list(client, message: Message, _):
                     smex += 1
                     text += _["sudo_6"]
                 count += 1
-                text += f"{count}➤ {user}\n"
+                text += f"{count}➥ {user}\n"
             except Exception:
                 continue
+
+    # If no text is created, reply with default message
     if not text:
         await message.reply_text(_["sudo_7"])
     else:

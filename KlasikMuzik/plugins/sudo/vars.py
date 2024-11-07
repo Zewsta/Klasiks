@@ -1,15 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
-
 import asyncio
 
 from pyrogram import filters
@@ -26,10 +14,10 @@ VARS_COMMAND = get_command("VARS_COMMAND")
 
 @app.on_message(filters.command(VARS_COMMAND) & SUDOERS)
 async def varsFunc(client, message):
-    mystic = await message.reply_text("ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ... ɢᴇᴛᴛɪɴɢ ʏᴏᴜʀ ᴄᴏɴғɪɢ ᴠᴀʀɪᴀʙʟᴇs...")
+    mystic = await message.reply_text("Lütfen Bekleyin... Yapılandırma Değişkenleriniz Alınıyor‌‌...")
     v_limit = await get_video_limit()
     bot_name = config.Muzik_BOT_NAME
-    up_r = f"[ʀᴇᴩᴏ]({config.UPSTREAM_REPO})"
+    up_r = f"[Repo]({config.UPSTREAM_REPO})"
     up_b = config.UPSTREAM_BRANCH
     auto_leave = config.AUTO_LEAVE_ASSISTANT_TIME
     yt_sleep = config.YOUTUBE_DOWNLOAD_EDIT_SLEEP
@@ -41,62 +29,62 @@ async def varsFunc(client, message):
     cm = config.CLEANMODE_DELETE_MINS
     auto_sug = config.AUTO_SUGGESTION_TIME
     if config.AUTO_LEAVING_ASSISTANT == str(True):
-        ass = "ʏᴇs"
+        ass = "Yes"
     else:
-        ass = "ɴᴏ"
+        ass = "No"
     if config.PRIVATE_BOT_MODE == str(True):
-        pvt = "ʏᴇs"
+        pvt = "Yes"
     else:
-        pvt = "ɴᴏ"
+        pvt = "No"
     if config.AUTO_SUGGESTION_MODE == str(True):
-        a_sug = "ʏᴇs"
+        a_sug = "Yes"
     else:
-        a_sug = "ɴᴏ"
+        a_sug = "No"
     if config.AUTO_DOWNLOADS_CLEAR == str(True):
-        down = "ʏᴇs"
+        down = "Yes"
     else:
-        down = "ɴᴏ"
+        down = "No"
 
     if not config.GITHUB_REPO:
-        git = "ɴᴏ"
+        git = "Yes"
     else:
-        git = f"[ʀᴇᴩᴏ]({config.GITHUB_REPO})"
+        git = f"[Repo]({config.GITHUB_REPO})"
     if not config.START_IMG_URL:
-        start = "ɴᴏ"
+        start = "No"
     else:
         start = f"[ɪᴍᴀɢᴇ]({config.START_IMG_URL})"
     if not config.SUPPORT_CHANNEL:
-        s_c = "ɴᴏ"
+        s_c = "No"
     else:
-        s_c = f"[ᴄʜᴀɴɴᴇʟ]({config.SUPPORT_CHANNEL})"
+        s_c = f"[Kanal]({config.SUPPORT_CHANNEL})"
     if not config.SUPPORT_GROUP:
-        s_g = "ɴᴏ"
+        s_g = "No"
     else:
-        s_g = f"[sᴜᴩᴩᴏʀᴛ]({config.SUPPORT_GROUP})"
+        s_g = f"[Destek]({config.SUPPORT_GROUP})"
     if not config.GIT_TOKEN:
-        token = "ɴᴏ"
+        token = "No"
     else:
-        token = "ʏᴇs"
+        token = "Yes"
     if not config.SPOTIFY_CLIENT_ID and not config.SPOTIFY_CLIENT_SECRET:
-        sotify = "ɴᴏ"
+        sotify = "No"
     else:
-        sotify = "ʏᴇs"
+        sotify = "Yes"
     owners = [str(ids) for ids in config.OWNER_ID]
     owner_id = " ,".join(owners)
     tg_aud = convert_bytes(config.TG_AUDIO_FILESIZE_LIMIT)
     tg_vid = convert_bytes(config.TG_VIDEO_FILESIZE_LIMIT)
-    text = f"""**ᴍᴜsɪᴄ ʙᴏᴛ ᴄᴏɴғɪɢ ᴠᴀʀɪᴀʙʟᴇs:**
+    text = f"""**Müzik Botu Yapılandırma Değişkenleri‌‌:**
 
-**<u>ʙᴀsɪᴄ ᴠᴀʀɪᴀʙʟᴇs:</u>**
-**ᴍᴜsɪᴄ_ʙᴏᴛ_ɴᴀᴍᴇ** : `{bot_name}`
-**ᴅᴜʀᴀᴛɪᴏɴ_ʟɪᴍɪᴛ** : `{play_duration} ᴍɪɴᴜᴛᴇs`
-**sᴏɴɢ_ᴅᴏᴡɴʟᴏᴀᴅ_ᴅᴜʀᴀᴛɪᴏɴ_ʟɪᴍɪᴛ** :` {song} ᴍɪɴᴜᴛᴇs`
-**ᴏᴡɴᴇʀ_ɪᴅ** : `{owner_id}`
+**<u>Temel Değişkenler‌‌:</u>**
+**Müzik Botu İsmi** : `{bot_name}`
+**Süre Sınırı** : `{play_duration} Dakika`
+**Şarkı İndirme Süresi Sınırı‌‌** :` {song} Dakika`
+**Developer ID** : `{owner_id}`
     
-**<u>ʀᴇᴩᴏsɪᴛᴏʀʏ ᴠᴀʀɪᴀʙʟᴇs:</u>**
-**ᴜᴩsᴛʀᴇᴀᴍ_ʀᴇᴩᴏ** : `{up_r}`
-**ᴜᴩsᴛʀᴇᴀᴍ_ʙʀᴀɴᴄʜ** : `{up_b}`
-**ɢɪᴛʜᴜʙ_ʀᴇᴩᴏ** :` {git}`
+**<u>Depo Değişkenleri‌‌:</u>**
+**Akış Deposu** : `{up_r}`
+**Depo Şubesi‌‌** : `{up_b}`
+**GitHub Deposu** :` {git}`
 **ɢɪᴛ_ᴛᴏᴋᴇɴ**:` {token}`
 
 

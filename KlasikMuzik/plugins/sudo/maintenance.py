@@ -1,15 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
-
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -43,7 +31,7 @@ async def maintenance(client, message: Message):
     state = state.lower()
     if state == "enable":
         if await is_maintenance() is False:
-            await message.reply_text("ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ.")
+            await message.reply_text("Bakım Modu Zaten Etkin.")
         else:
             await maintenance_on()
             await message.reply_text(_["maint_2"])
@@ -53,7 +41,7 @@ async def maintenance(client, message: Message):
             await message.reply_text(_["maint_3"])
         else:
             await message.reply_text(
-                "ɪ ᴅᴏɴ'ᴛ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ ᴇɴᴀʙʟᴇᴅ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ."
+                "Bakım Modunu Etkinleştirdiğinizi Hatırlamıyorum."
             )
     else:
         await message.reply_text(usage)

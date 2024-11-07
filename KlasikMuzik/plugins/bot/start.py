@@ -1,15 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
-
 import asyncio
 
 from pyrogram import filters
@@ -58,7 +46,7 @@ async def start_comm(client, message: Message, _):
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
             m = await message.reply_text(
-                "🥱 ɢᴇᴛᴛɪɴɢ ʏᴏᴜʀ ᴩᴇʀsᴏɴᴀʟ sᴛᴀᴛs ғʀᴏᴍ {config.Muzik_BOT_NAME} sᴇʀᴠᴇʀ."
+                "🥱 {config.Muzik_BOT_NAME} Sunucusundan Kişisel İstatistiklerinizi Alın.‌‌"
             )
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
@@ -94,9 +82,9 @@ async def start_comm(client, message: Message, _):
                     details = stats.get(vidid)
                     title = (details["title"][:35]).title()
                     if vidid == "telegram":
-                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/Shayri_Muzik_Lovers) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
+                        msg += f"🔗[Telegram Medya](https://t.me/Eskiyalarr) ** Oynadı {count} Kere**\n\n"
                     else:
-                        msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** played {count} times**\n\n"
+                        msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** Oynadı {count} Kere**\n\n"
                 msg = _["ustats_2"].format(tot, tota, limit) + msg
                 return videoid, msg
 
@@ -116,7 +104,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <code>sᴜᴅᴏʟɪsᴛ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                    f"{message.from_user.mention} Bot Kontrolünü Başlattı <code>Sudolist</code>\n\nKullanıcı ID: {sender_id}\nKullanıcı adı: {sender_name}‌‌",
                 )
             return
         if name[0:3] == "lyr":
@@ -126,7 +114,7 @@ async def start_comm(client, message: Message, _):
             if lyrics:
                 return await Telegram.send_split_text(message, lyrics)
             else:
-                return await message.reply_text("ғᴀɪʟᴇᴅ ᴛᴏ ɢᴇᴛ ʟʏʀɪᴄs.")
+                return await message.reply_text("Şarkı Sözleri Alınamadı‌‌.")
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
         if name[0:3] == "inf":
@@ -144,23 +132,23 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-😲**ᴛʀᴀᴄᴋ ɪɴғᴏʀɴᴀᴛɪᴏɴ**😲
+😲**Takip Bilgileri‌‌**😲
 
-📌**ᴛɪᴛʟᴇ:** {title}
+🔮 **Başlık:** {title}
 
-⏳**ᴅᴜʀᴀᴛɪᴏɴ:** {duration} ᴍɪɴᴜᴛᴇs
-👀**ᴠɪᴇᴡs:** `{views}`
-⏰**ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ:** {published}
-🎥**ᴄʜᴀɴɴᴇʟ:** {channel}
-📎**ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
-🔗**ʟɪɴᴋ:** [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
+⏳ **Süre:** {duration} Dakika
+👀 **Görüntülenme:** `{views}`
+⏰ **Yayınlanma Tarihi:** {published}
+🎥 **Kanal:** {channel}
+📎 **Kanal Bağlantısı:** [Kanalı Ziyaret Edin]({channellink})
+🔗 **Bağlantı:** [YouTube'da İzle‌‌]({link})
 
-💖 sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {config.Muzik_BOT_NAME}"""
+💖 Aramayı Destekleyen {config.Muzik_BOT_NAME}"""
             key = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="• ʏᴏᴜᴛᴜʙᴇ •", url=f"{link}"),
-                        InlineKeyboardButton(text="• ᴄʟᴏsᴇ •", callback_data="close"),
+                        InlineKeyboardButton(text="• YouTube •", url=f"{link}"),
+                        InlineKeyboardButton(text="• Kapat •", callback_data="close"),
                     ],
                 ]
             )
@@ -177,7 +165,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <code>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                    f"{message.from_user.mention} #Start_Verdi <code>Parça Bilgileri</code>\n\n**Kullanıcı ID:** {sender_id}\n**Kullanıcı Adı:** {sender_name}",
                 )
     else:
         try:
@@ -208,7 +196,7 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                f"#Start_Verdi\n\n🎉 **Kullanıcı:** {message.from_user.mention}\n\n❤️‍🔥 **Kullanıcı ID:** {sender_id}\n🤍 **Kullanıcı Adı:** {sender_name}",
             )
 
 
@@ -233,7 +221,7 @@ async def welcome(client, message: Message):
     if config.PRIVATE_BOT_MODE == str(True):
         if not await is_served_private_chat(message.chat.id):
             await message.reply_text(
-                "**ᴩʀɪᴠᴀᴛᴇ ᴍᴜsɪᴄ ʙᴏᴛ**\n\nᴏɴʟʏ ғᴏʀ ᴛʜᴇ ᴄʜᴀᴛs ᴀᴜᴛʜᴏʀɪsᴇᴅ ʙʏ ᴍʏ ᴏᴡɴᴇʀ, ʀᴇǫᴜᴇsᴛ ɪɴ ᴍʏ ᴏᴡɴᴇʀ's ᴩᴍ ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ᴀɴᴅ ɪғ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛᴏ ᴅᴏ sᴏ ᴛʜᴇɴ ғᴜ*ᴋ ᴏғғ ʙᴇᴄᴀᴜsᴇ ɪ'ᴍ ʟᴇᴀᴠɪɴɢ."
+                "**Özel Müzik Bot**\n\nBu Bot Özeldir! Önce @Zewsta'dan İzin Almalısın!"
             )
             return await app.leave_chat(message.chat.id)
     else:
@@ -275,31 +263,3 @@ async def welcome(client, message: Message):
             return
         except:
             return
-
-
-@app.on_message(commandpro(["/alive", "Klasik"]))
-async def alive(client, message: Message):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/125f531d44a9999290cac.jpg",
-        caption=f"""━━━━━━━━━━━━━━━━━━━━━━━━\n\n✪ ʜᴇʟʟᴏ, ᴀʟᴇxᴀ ɪs ᴡᴏʀᴋɪɴɢ ᴀɴᴅ ғᴜɴᴄᴛɪᴏɴɪɴɢ ᴘʀᴏᴘᴇʀʟʏ\n✪ ᴛʜᴀɴᴋs ᴛᴏ ʏᴜᴋᴋɪ ᴛᴇᴀᴍ 🌼 ..\n\n┏━━━━━━━━━━━━━━━━━┓\n┣★ ᴏᴡɴᴇʀ    : [ᴀsᴀᴅ ᴀʟɪ](https://t.me/Dr_Asad_Ali)\n┣★ ᴜᴘᴅᴀᴛᴇs › : [ᴀʟᴇxᴀ ʜᴇʟᴘ](https://t.me/Klasik_BotUpdates)┓\n┣★ ʀᴇᴘᴏ › : [ᴀʟᴇxᴀ ʀᴇᴘᴏ](https://github.com/jankarikiduniya/KlasikMuzik)\n┗━━━━━━━━━━━━━━━━━┛\n\n💞 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ\nᴅᴍ ᴛᴏ ᴍʏ [ᴏᴡɴᴇʀ](https://t.me/Jankari_Ki_Duniya) ᴍᴀᴋᴇ sᴜʀᴇ ᴛᴏ sᴛᴀʀ ᴏᴜʀ ᴘʀᴏᴊᴇᴄᴛ ...\n\n━━━━━━━━━━━━━━━━━━━━━━━━""",
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🌼 ᴀʟᴇxᴀ ᴄʜᴀᴛ 💮", url=config.SUPPORT_GROUP)]]
-        ),
-    )
-
-
-@app.on_message(commandpro(["/verify", "Klasikverification"]))
-async def verify(client, message: Message):
-    if await is_served_user(message.from_user.id):
-        await message.reply_text(
-            text="😂 ᴅᴇᴀʀ ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴠᴇʀɪғɪᴇᴅ",
-        )
-        return
-    await add_served_user(message.from_user.id)
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/7f08acd78577f99f60ff5.png",
-        caption=f"""━━━━━━━━━━━━━━━━━━━━━━━━\n\n✪ **ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴ** 🎉\n✪ ɴᴏᴡ ʏᴏᴜ ᴀʀᴇ ᴀʟᴇxᴀ ᴠᴇʀɪғɪᴇᴅ ᴍᴇᴍʙᴇʀ ɢᴏ ʙᴀᴄᴋ ᴀɴᴅ ᴇɴᴊᴏʏ ᴏᴜʀ sᴇʀᴠɪᴄᴇ ᴀɴᴅ ᴘʟᴀʏ ᴍᴜsɪᴄ 🌼 ..\n\n━━━━━━━━━━━━━━━━━━━━━━━━""",
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🌼 ᴀʟᴇxᴀ ᴄʜᴀᴛ 💮", url=config.SUPPORT_GROUP)]]
-        ),
-    )

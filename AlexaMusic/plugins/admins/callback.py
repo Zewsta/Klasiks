@@ -43,7 +43,6 @@ from AlexaMusic.utils.formatters import seconds_to_min
 from AlexaMusic.utils.inline.play import panel_markup_1, panel_markup_2, panel_markup_3, stream_markup, telegram_markup
 from AlexaMusic.utils.stream.autoclear import auto_clean
 from AlexaMusic.utils.thumbnails import gen_thumb
-from AlexaMusic.utils.theme import check_theme
 
 wrong = {}
 
@@ -257,12 +256,10 @@ async def del_back_playlist(client, CallbackQuery, _):
                 await Alexa.skip_stream(chat_id, link, video=status)
             except Exception:
                 return await CallbackQuery.message.reply_text(_["call_9"])
-            # theme = await check_theme(chat_id)
             button = telegram_markup(_, chat_id)
-            img = await gen_thumb(videoid)
-            run = await CallbackQuery.message.reply_photo(
-                photo=img,
-                caption=_["stream_1"].format(
+            img = None
+            run = await CallbackQuery.message.reply_text(
+                text=_["stream_1"].format(
                     user,
                     f"https://t.me/{app.username}?start=info_{videoid}",
                 ),
@@ -288,12 +285,10 @@ async def del_back_playlist(client, CallbackQuery, _):
                 await Alexa.skip_stream(chat_id, file_path, video=status)
             except Exception:
                 return await mystic.edit_text(_["call_9"])
-            # theme = await check_theme(chat_id)
             button = stream_markup(_, videoid, chat_id)
-            img = await gen_thumb(videoid)
-            run = await CallbackQuery.message.reply_photo(
-                photo=img,
-                caption=_["stream_1"].format(
+            img = None
+            run = await CallbackQuery.message.reply_text(
+                text=_["stream_1"].format(
                     title[:27],
                     f"https://t.me/{app.username}?start=info_{videoid}",
                     duration_min,
@@ -311,9 +306,8 @@ async def del_back_playlist(client, CallbackQuery, _):
             except Exception:
                 return await CallbackQuery.message.reply_text(_["call_9"])
             button = telegram_markup(_, chat_id)
-            run = await CallbackQuery.message.reply_photo(
-                photo=STREAM_IMG_URL,
-                caption=_["stream_2"].format(user),
+            run = await CallbackQuery.message.reply_text(
+                text=_["stream_2"].format(user),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
@@ -326,37 +320,25 @@ async def del_back_playlist(client, CallbackQuery, _):
                 return await CallbackQuery.message.reply_text(_["call_9"])
             if videoid == "telegram":
                 button = telegram_markup(_, chat_id)
-                run = await CallbackQuery.message.reply_photo(
-                    photo=(
-                        TELEGRAM_AUDIO_URL
-                        if str(streamtype) == "audio"
-                        else TELEGRAM_VIDEO_URL
-                    ),
-                    caption=_["stream_3"].format(title, check[0]["dur"], user),
+                run = await CallbackQuery.message.reply_text(
+                    text=_["stream_3"].format(title, check[0]["dur"], user),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
             elif videoid == "soundcloud":
                 button = telegram_markup(_, chat_id)
-                run = await CallbackQuery.message.reply_photo(
-                    photo=(
-                        SOUNCLOUD_IMG_URL
-                        if str(streamtype) == "audio"
-                        else TELEGRAM_VIDEO_URL
-                    ),
-                    caption=_["stream_3"].format(title, check[0]["dur"], user),
+                run = await CallbackQuery.message.reply_text(
+                    text=_["stream_3"].format(title, check[0]["dur"], user),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
             else:
-                # theme = await check_theme(chat_id)
                 button = stream_markup(_, videoid, chat_id)
-                img = await gen_thumb(videoid)
-                run = await CallbackQuery.message.reply_photo(
-                    photo=img,
-                    caption=_["stream_1"].format(
+                img = None
+                run = await CallbackQuery.message.reply_text(
+                    text=_["stream_1"].format(
                         title[:27],
                         f"https://t.me/{app.username}?start=info_{videoid}",
                         duration_min,

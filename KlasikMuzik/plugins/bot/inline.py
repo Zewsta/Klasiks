@@ -1,15 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
-
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -43,27 +31,27 @@ async def inline_query_handler(client, query):
             channel = result[x]["channel"]["name"]
             link = result[x]["link"]
             published = result[x]["publishedTime"]
-            description = f"{views} | {duration} Mins | {channel}  | {published}"
+            description = f"{views} | {duration} Dakika | {channel}  | {published}"
             buttons = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="• ʏᴏᴜᴛᴜʙᴇ •",
+                            text="• YouTube •",
                             url=link,
                         )
                     ],
                 ]
             )
             searched_text = f"""
-📌**ᴛɪᴛʟᴇ:** [{title}]({link})
+🔮 **Başlık:** [{title}]({link})
 
-⏳**ᴅᴜʀᴀᴛɪᴏɴ:** {duration} Mins
-👀**ᴠɪᴇᴡs:** `{views}`
-⏰**ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ:** {published}
-🎥**ᴄʜᴀɴɴᴇʟ:** {channel}
-📎**ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
+⏳ **Süre:** {duration} Dakika
+👀 **Görüntülenme:** `{views}`
+⏰ **Yayınlanma Tarihi:** {published}
+🎥 **Kanal:** {channel}
+📎 **Kanal Bağlantısı:** [Kanalı Ziyaret Edin‌‌]({channellink})
 
-💖 ** sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {Muzik_BOT_NAME} **"""
+💖 ** Aramayı Destekleyen {Muzik_BOT_NAME} **"""
             answers.append(
                 InlineQueryResultPhoto(
                     photo_url=thumbnail,

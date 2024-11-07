@@ -15,15 +15,15 @@ from pyrogram import filters
 
 import config
 from strings import get_command
-from AlexaMusic import app
-from AlexaMusic.misc import HAPP, SUDOERS, XCB
-from AlexaMusic.utils.database import (
+from KlasikMuzik import app
+from KlasikMuzik.misc import HAPP, SUDOERS, XCB
+from KlasikMuzik.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from AlexaMusic.utils.decorators.language import language
-from AlexaMusic.utils.pastebin import Alexabin
+from KlasikMuzik.utils.decorators.language import language
+from KlasikMuzik.utils.pastebin import Alexabin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")

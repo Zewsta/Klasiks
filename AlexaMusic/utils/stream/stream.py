@@ -33,7 +33,6 @@ from AlexaMusic.utils.inline.playlist import close_markup
 from AlexaMusic.utils.pastebin import Alexabin
 from AlexaMusic.utils.stream.queue import put_queue, put_queue_index
 from AlexaMusic.utils.thumbnails import gen_thumb, gen_qthumb
-from AlexaMusic.utils.theme import check_theme
 
 
 async def stream(
@@ -117,13 +116,11 @@ async def stream(
                     "video" if video else "audio",
                     forceplay=forceplay,
                 )
-                # theme = await check_theme(chat_id)
-                img = await gen_thumb(vidid)
+                img = None
                 button = stream_markup(_, vidid, chat_id)
-                run = await app.send_photo(
+                run = await app.send_message(
                     original_chat_id,
-                    photo=img,
-                    caption=_["stream_1"].format(
+                    text=_["stream_1"].format(
                         title[:27],
                         f"https://t.me/{app.username}?start=info_{vidid}",
                         duration_min,
@@ -144,10 +141,9 @@ async def stream(
                 car = msg
             carbon = await Carbon.generate(car, randint(100, 10000000))
             upl = close_markup(_)
-            return await app.send_photo(
+            return await app.send_message(
                 original_chat_id,
-                photo=carbon,
-                caption=_["playlist_18"].format(position, link),
+                text=_["playlist_18"].format(position, link),
                 reply_markup=upl,
             )
     elif streamtype == "youtube":
@@ -175,13 +171,11 @@ async def stream(
                 user_id,
                 "video" if video else "audio",
             )
-            # theme = await check_theme(chat_id)
             position = len(db.get(chat_id)) - 1
-            qimg = await gen_qthumb(vidid)
-            run = await app.send_photo(
+            qimg = None
+            run = await app.send_message(
                 original_chat_id,
-                photo=qimg,
-                caption=_["queue_4"].format(
+                text=_["queue_4"].format(
                     position, title[:27], duration_min, user_name
                 ),
             )
@@ -203,14 +197,12 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            # theme = await check_theme(chat_id)
-            img = await gen_thumb(vidid)
+            img = None
             button = stream_markup(_, vidid, chat_id)
             try:
-                run = await app.send_photo(
+                run = await app.send_message(
                     original_chat_id,
-                    photo=img,
-                    caption=_["stream_1"].format(
+                    text=_["stream_1"].format(
                         title[:27],
                         f"https://t.me/{app.username}?start=info_{vidid}",
                         duration_min,
@@ -260,10 +252,9 @@ async def stream(
                 forceplay=forceplay,
             )
             button = telegram_markup(_, chat_id)
-            run = await app.send_photo(
+            run = await app.send_message(
                 original_chat_id,
-                photo=config.SOUNCLOUD_IMG_URL,
-                caption=_["stream_3"].format(title, duration_min, user_name),
+                text=_["stream_3"].format(title, duration_min, user_name),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
@@ -310,10 +301,9 @@ async def stream(
             if video:
                 await add_active_video_chat(chat_id)
             button = telegram_markup(_, chat_id)
-            run = await app.send_photo(
+            run = await app.send_message(
                 original_chat_id,
-                photo=config.TELEGRAM_VIDEO_URL if video else config.TELEGRAM_AUDIO_URL,
-                caption=_["stream_4"].format(title, link, duration_min, user_name),
+                text=_["stream_4"].format(title, link, duration_min, user_name),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
@@ -367,13 +357,11 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            # theme = await check_theme(chat_id)
-            img = await gen_thumb(vidid)
+            img = None
             button = telegram_markup(_, chat_id)
-            run = await app.send_photo(
+            run = await app.send_message(
                 original_chat_id,
-                photo=img,
-                caption=_["stream_1"].format(
+                text=_["stream_1"].format(
                     title[:27],
                     f"https://t.me/{app.username}?start=info_{vidid}",
                     duration_min,
@@ -423,10 +411,9 @@ async def stream(
                 forceplay=forceplay,
             )
             button = telegram_markup(_, chat_id)
-            run = await app.send_photo(
+            run = await app.send_message(
                 original_chat_id,
-                photo=config.STREAM_IMG_URL,
-                caption=_["stream_2"].format(user_name),
+                text=_["stream_2"].format(user_name),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run

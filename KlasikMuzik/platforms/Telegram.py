@@ -101,7 +101,7 @@ class TeleAPI:
                     [
                         [
                             InlineKeyboardButton(
-                                text="😐 ᴄᴀɴᴄᴇʟ",
+                                text="😐 İptal",
                                 callback_data="stop_downloading",
                             ),
                         ]
@@ -120,14 +120,14 @@ class TeleAPI:
                     completed_size = convert_bytes(current)
                     speed = convert_bytes(speed)
                     text = f"""
-**{Muzik_BOT_NAME} ᴍᴇᴅɪᴀ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ**
+**{Muzik_BOT_NAME} Medya İndirici**
 
-**sɪᴢᴇ:** {total_size}
-**ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ:** {completed_size} 
-**ᴩᴇʀᴄᴇɴᴛᴀɢᴇ:** {percentage[:5]}%
+**Boyut:** {total_size}
+**İndirilen:** {completed_size} 
+**Yüzde:** {percentage[:5]}%
 
-**sᴩᴇᴇᴅ:** {speed}/s
-**ᴇᴛᴀ:** {eta}"""
+**Hız:** {speed}/s
+**ETA:** {eta}"""
                     try:
                         await mystic.edit_text(text, reply_markup=upl)
                     except:
@@ -146,7 +146,7 @@ class TeleAPI:
                     progress=progress,
                 )
                 await mystic.edit_text(
-                    "**ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ, ᴩʀᴏᴄᴇssɪɴɢ...**"
+                    "**Dosya Başarıyla İndirildi, İşleniyor...‌‌**"
                 )
                 downloader.pop(message.id)
             except:

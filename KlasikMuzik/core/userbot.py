@@ -1,15 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
-
 import sys
 
 from pyrogram import Client
@@ -61,24 +49,24 @@ class Userbot(Client):
         )
 
     async def start(self):
-        LOGGER(__name__).info(f"Starting Assistant Clients...")
+        LOGGER(__name__).info(f"Asistanlar Başlatılıyor...")
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("Klasik_Help")
-                await self.one.join_chat("TheTeamKlasik")
-                await self.one.join_chat("Klasik_BotUpdates")
+                await self.one.join_chat("KlasikDestek")
+                await self.one.join_chat("KlasikDuyuru")
+                await self.one.join_chat("Eskiyalarr")
             except:
                 pass
             assistants.append(1)
             try:
                 await self.one.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "» Klasik Asistan¹, Başarıyla Başlatıldı ✨",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    f"Klasik Asistan¹ Log Grubuna Erişemedi. Asistanınızı Log Grubunuza Eklediğinizden Ve Yönetici Yaptığınızdan Emin Olun!"
                 )
                 sys.exit()
             get_me = await self.one.get_me()
@@ -89,24 +77,24 @@ class Userbot(Client):
                 self.one.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.one.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Started as {self.one.name}")
+            LOGGER(__name__).info(f"Asistan 1, {self.one.name} Olarak Başlatıldı")
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("Klasik_Help")
-                await self.two.join_chat("TheTeamKlasik")
-                await self.two.join_chat("Klasik_BotUpdates")
+                await self.two.join_chat("KlasikDestek")
+                await self.two.join_chat("KlasikDuyuru")
+                await self.two.join_chat("Eskiyalar")
             except:
                 pass
             assistants.append(2)
             try:
                 await self.two.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "» Klasik Asistan², Başarıyla Başlatıldı ✨",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 2 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    f"Klasik Asistan² Log Grubuna Erişemedi. Asistanınızı Log Grubunuza Eklediğinizden Ve Yönetici Yaptığınızdan Emin Olun!"
                 )
                 sys.exit()
             get_me = await self.two.get_me()
@@ -117,24 +105,24 @@ class Userbot(Client):
                 self.two.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.two.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Two Started as {self.two.name}")
+            LOGGER(__name__).info(f"Asistan 2, {self.two.name} Olarak Başlatıldı")
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("Klasik_Help")
-                await self.three.join_chat("TheTeamKlasik")
-                await self.three.join_chat("Klasik_BotUpdates")
+                await self.three.join_chat("KlasikDestek")
+                await self.three.join_chat("KlasikDuyuru")
+                await self.three.join_chat("Eskiyalarr")
             except:
                 pass
             assistants.append(3)
             try:
                 await self.three.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "» Klasik Asistan³, Başarıyla Başlatıldı ✨",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 3 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    f"Klasik Asistan³ Log Grubuna Erişemedi. Asistanınızı Log Grubunuza Eklediğinizden Ve Yönetici Yaptığınızdan Emin Olun!"
                 )
                 sys.exit()
             get_me = await self.three.get_me()
@@ -145,24 +133,24 @@ class Userbot(Client):
                 self.three.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.three.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Three Started as {self.three.name}")
+            LOGGER(__name__).info(f"Asistan 3, {self.three.name} Olarak Başlatıldı")
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("Klasik_Help")
-                await self.four.join_chat("TheTeamKlasik")
-                await self.four.join_chat("Klasik_BotUpdates")
+                await self.four.join_chat("KlasikDestek")
+                await self.four.join_chat("KlasikDuyuru")
+                await self.four.join_chat("Eskiyalarr")
             except:
                 pass
             assistants.append(4)
             try:
                 await self.four.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "» Klasik Asistan⁴, Başarıyla Başlatıldı ✨",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 4 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    f"Klasik Asistan⁴ Log Grubuna Erişemedi. Asistanınızı Log Grubunuza Eklediğinizden Ve Yönetici Yaptığınızdan Emin Olun!"
                 )
                 sys.exit()
             get_me = await self.four.get_me()
@@ -173,24 +161,24 @@ class Userbot(Client):
                 self.four.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.four.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Four Started as {self.four.name}")
+            LOGGER(__name__).info(f"Asistan 4, {self.four.name} Olarak Başlatıldı")
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("Klasik_Help")
-                await self.five.join_chat("TheTeamKlasik")
-                await self.five.join_chat("Klasik_BotUpdates")
+                await self.five.join_chat("KlasikDestek")
+                await self.five.join_chat("KlasikDuyuru")
+                await self.five.join_chat("Eskiyalarr")
             except:
                 pass
             assistants.append(5)
             try:
                 await self.five.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "» Klasik Asistanⁿ, Başarıyla Başlatıldı ✨",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 5 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    f"Klasik Asistanⁿ Log Grubuna Erişemedi. Asistanınızı Log Grubunuza Eklediğinizden Ve Yönetici Yaptığınızdan Emin Olun!"
                 )
                 sys.exit()
             get_me = await self.five.get_me()
@@ -201,4 +189,4 @@ class Userbot(Client):
                 self.five.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.five.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Five Started as {self.five.name}")
+            LOGGER(__name__).info(f"Asistan 5, {self.five.name} Olarak Başlatıldı")

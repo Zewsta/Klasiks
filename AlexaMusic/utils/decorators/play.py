@@ -20,11 +20,11 @@ from pyrogram.errors import (
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
-from KlasikMusic.misc import db
+from KlasikMuzik.misc import db
 from strings import get_string
-from KlasikMusic import YouTube, app
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils.database import (
+from KlasikMuzik import YouTube, app
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils.database import (
     get_cmode,
     get_lang,
     get_playmode,
@@ -34,8 +34,8 @@ from KlasikMusic.utils.database import (
     is_commanddelete_on,
     is_served_private_chat,
 )
-from KlasikMusic.utils.database.memorydatabase import is_maintenance
-from KlasikMusic.utils.inline.playlist import botplaylist_markup
+from KlasikMuzik.utils.database.memorydatabase import is_maintenance
+from KlasikMuzik.utils.inline.playlist import botplaylist_markup
 
 links = {}
 
@@ -50,7 +50,7 @@ def PlayWrapper(command):
         if PRIVATE_BOT_MODE == str(True):
             if not await is_served_private_chat(message.chat.id):
                 await message.reply_text(
-                    "**Private Music Bot**\n\nOnly for authorized chats from the owner. Ask my owner to allow your chat first."
+                    "**Private Muzik Bot**\n\nOnly for authorized chats from the owner. Ask my owner to allow your chat first."
                 )
                 return await app.leave_chat(message.chat.id)
         if await is_commanddelete_on(message.chat.id):

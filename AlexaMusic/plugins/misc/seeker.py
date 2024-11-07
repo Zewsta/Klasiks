@@ -16,15 +16,15 @@ from pyrogram.types import InlineKeyboardMarkup
 from datetime import datetime, timedelta
 
 from strings import get_string
-from KlasikMusic.misc import db
-from KlasikMusic.utils.database import (
+from KlasikMuzik.misc import db
+from KlasikMuzik.utils.database import (
     get_active_chats,
     get_lang,
-    is_music_playing,
+    is_Muzik_playing,
     get_assistant,
 )
-from KlasikMusic.utils.formatters import seconds_to_min
-from KlasikMusic.utils.inline import stream_markup_timer, telegram_markup_timer
+from KlasikMuzik.utils.formatters import seconds_to_min
+from KlasikMuzik.utils.inline import stream_markup_timer, telegram_markup_timer
 
 from ..admins.callback import wrong
 from .autoleave import autoend
@@ -36,7 +36,7 @@ async def timer():
     while not await asyncio.sleep(1):
         active_chats = await get_active_chats()
         for chat_id in active_chats:
-            if not await is_music_playing(chat_id):
+            if not await is_Muzik_playing(chat_id):
                 continue
             playing = db.get(chat_id)
             if not playing:
@@ -58,7 +58,7 @@ async def markup_timer():
         active_chats = await get_active_chats()
         for chat_id in active_chats:
             try:
-                if not await is_music_playing(chat_id):
+                if not await is_Muzik_playing(chat_id):
                     continue
                 playing = db.get(chat_id)
                 if not playing:

@@ -14,15 +14,15 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from strings import get_command, get_string
-from KlasikMusic import app
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils.database import (
+from KlasikMuzik import app
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils.database import (
     get_lang,
     is_maintenance,
     maintenance_off,
     maintenance_on,
 )
-from KlasikMusic.utils.decorators.language import language
+from KlasikMuzik.utils.decorators.language import language
 
 # Commands
 MAINTENANCE_COMMAND = get_command("MAINTENANCE_COMMAND")

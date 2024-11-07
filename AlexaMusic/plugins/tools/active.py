@@ -15,9 +15,9 @@ from pyrogram.types import Message
 from unidecode import unidecode
 
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.misc import SUDOERS, db
-from KlasikMusic.utils.database.memorydatabase import (
+from KlasikMuzik import app
+from KlasikMuzik.misc import SUDOERS, db
+from KlasikMuzik.utils.database.memorydatabase import (
     get_active_chats,
     get_active_video_chats,
     remove_active_chat,

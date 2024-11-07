@@ -28,9 +28,9 @@ from pytgcalls.types import ChatUpdate, MediaStream, Update
 from pytgcalls.types import StreamAudioEnded
 
 import config
-from KlasikMusic import LOGGER, YouTube, app
-from KlasikMusic.misc import db
-from KlasikMusic.utils.database import (
+from KlasikMuzik import LOGGER, YouTube, app
+from KlasikMuzik.misc import db
+from KlasikMuzik.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_assistant,
@@ -39,15 +39,15 @@ from KlasikMusic.utils.database import (
     get_loop,
     get_video_bitrate,
     group_assistant,
-    music_on,
+    Muzik_on,
     remove_active_chat,
     remove_active_video_chat,
     set_loop,
 )
-from KlasikMusic.utils.exceptions import AssistantErr
-from KlasikMusic.utils.inline.play import stream_markup, telegram_markup
-from KlasikMusic.utils.stream.autoclear import auto_clean
-from KlasikMusic.utils.thumbnails import gen_thumb
+from KlasikMuzik.utils.exceptions import AssistantErr
+from KlasikMuzik.utils.inline.play import stream_markup, telegram_markup
+from KlasikMuzik.utils.stream.autoclear import auto_clean
+from KlasikMuzik.utils.thumbnails import gen_thumb
 from strings import get_string
 
 autoend = {}
@@ -291,7 +291,7 @@ class Call(PyTgCalls):
                 "**ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀ ᴇʀʀᴏʀ**\n\nᴩʟᴇᴀsᴇ ᴛᴜʀɴ ᴏғғ ᴀɴᴅ ʀᴇsᴛᴀʀᴛ ᴛʜᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛ ᴀɢᴀɪɴ."
             )
         await add_active_chat(chat_id)
-        await music_on(chat_id)
+        await Muzik_on(chat_id)
         if video:
             await add_active_video_chat(chat_id)
 

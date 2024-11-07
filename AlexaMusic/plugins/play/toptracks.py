@@ -14,15 +14,15 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
 
-from KlasikMusic import app
-from KlasikMusic.utils.database import get_global_tops, get_particulars, get_userss
-from KlasikMusic.utils.decorators.language import languageCB
-from KlasikMusic.utils.inline.playlist import (
+from KlasikMuzik import app
+from KlasikMuzik.utils.database import get_global_tops, get_particulars, get_userss
+from KlasikMuzik.utils.decorators.language import languageCB
+from KlasikMuzik.utils.inline.playlist import (
     botplaylist_markup,
     failed_top_markup,
     top_play_markup,
 )
-from KlasikMusic.utils.stream.stream import stream
+from KlasikMuzik.utils.stream.stream import stream
 from config import BANNED_USERS
 
 loop = asyncio.get_running_loop()

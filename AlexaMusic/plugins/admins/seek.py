@@ -15,10 +15,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from KlasikMusic import YouTube, app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.misc import db
-from KlasikMusic.utils import AdminRightsCheck, seconds_to_min
+from KlasikMuzik import YouTube, app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.misc import db
+from KlasikMuzik.utils import AdminRightsCheck, seconds_to_min
 
 # Commands
 SEEK_COMMAND = get_command("SEEK_COMMAND")

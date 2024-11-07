@@ -17,22 +17,22 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from KlasikMusic import Carbon, YouTube, app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.misc import db
-from KlasikMusic.utils.database import (
+from KlasikMuzik import Carbon, YouTube, app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.misc import db
+from KlasikMuzik.utils.database import (
     add_active_chat,
     add_active_video_chat,
     is_active_chat,
     is_video_allowed,
-    music_on,
+    Muzik_on,
 )
-from KlasikMusic.utils.exceptions import AssistantErr
-from KlasikMusic.utils.inline.play import stream_markup, telegram_markup
-from KlasikMusic.utils.inline.playlist import close_markup
-from KlasikMusic.utils.pastebin import Klasikbin
-from KlasikMusic.utils.stream.queue import put_queue, put_queue_index
-from KlasikMusic.utils.thumbnails import gen_thumb, gen_qthumb
+from KlasikMuzik.utils.exceptions import AssistantErr
+from KlasikMuzik.utils.inline.play import stream_markup, telegram_markup
+from KlasikMuzik.utils.inline.playlist import close_markup
+from KlasikMuzik.utils.pastebin import Klasikbin
+from KlasikMuzik.utils.stream.queue import put_queue, put_queue_index
+from KlasikMuzik.utils.thumbnails import gen_thumb, gen_qthumb
 
 
 async def stream(

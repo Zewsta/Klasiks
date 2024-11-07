@@ -16,21 +16,21 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from KlasikMusic import Carbon, YouTube, app
-from KlasikMusic.utils.database import (
+from KlasikMuzik import Carbon, YouTube, app
+from KlasikMuzik.utils.database import (
     delete_playlist,
     get_playlist,
     get_playlist_names,
     save_playlist,
 )
-from KlasikMusic.utils.decorators.language import language, languageCB
-from KlasikMusic.utils.inline.playlist import (
+from KlasikMuzik.utils.decorators.language import language, languageCB
+from KlasikMuzik.utils.inline.playlist import (
     botplaylist_markup,
     get_playlist_markup,
     warning_markup,
 )
-from KlasikMusic.utils.pastebin import Klasikbin
-from KlasikMusic.utils.stream.stream import stream
+from KlasikMuzik.utils.pastebin import Klasikbin
+from KlasikMuzik.utils.stream.stream import stream
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
 from strings import get_command
 

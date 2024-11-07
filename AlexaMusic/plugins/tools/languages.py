@@ -16,9 +16,9 @@ from pyrogram.types import InlineKeyboardButton, Message
 
 from config import BANNED_USERS
 from strings import get_command, get_string
-from KlasikMusic import app
-from KlasikMusic.utils.database import get_lang, set_lang
-from KlasikMusic.utils.decorators import ActualAdminCB, language, languageCB
+from KlasikMuzik import app
+from KlasikMuzik.utils.database import get_lang, set_lang
+from KlasikMuzik.utils.decorators import ActualAdminCB, language, languageCB
 
 # Languages Available
 

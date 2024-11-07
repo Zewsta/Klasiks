@@ -15,10 +15,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
-from KlasikMusic.utils.decorators.language import language
+from KlasikMuzik import app
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
+from KlasikMuzik.utils.decorators.language import language
 
 # Commands
 

@@ -16,7 +16,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from KlasikMusic.core.mongo import mongodb
+from KlasikMuzik.core.mongo import mongodb
 
 from .logging import LOGGER
 

@@ -1,13 +1,13 @@
 # This code is written by (C) TheTeamKlasik bot will send message to log group when someone add
 # this bot to new group make sure to star all projects
 # Copyright (C) 2021-2024 by Klasik_Help@ Github, < TheTeamKlasik >.
-# A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
+# A Powerful Muzik Bot Property Of Rocks Indian Largest Chatting Group
 # All rights reserved. © Alisha © Klasik © Yukki
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from KlasikMusic import app
-from KlasikMusic.utils.database import get_served_chats
+from KlasikMuzik import app
+from KlasikMuzik.utils.database import get_served_chats
 from config import LOG_GROUP_ID
 
 

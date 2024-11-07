@@ -14,9 +14,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import ChatType, ChatMemberStatus
 from config import SUPPORT_GROUP, adminlist
 from strings import get_string
-from KlasikMusic import app
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils.database import (
+from KlasikMuzik import app
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils.database import (
     get_authuser_names,
     get_cmode,
     get_lang,

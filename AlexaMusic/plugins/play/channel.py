@@ -9,13 +9,13 @@ This program is free software: you can redistribute it and can modify
 as you want or you can collab if you have new ideas.
 """
 
-from KlasikMusic import app
+from KlasikMuzik import app
 from pyrogram import filters
 from config import BANNED_USERS
 from strings import get_command
 from pyrogram.types import Message
-from KlasikMusic.utils.database import set_cmode
-from KlasikMusic.utils.decorators.admins import AdminActual
+from KlasikMuzik.utils.database import set_cmode
+from KlasikMuzik.utils.decorators.admins import AdminActual
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 
 ### Multi-Lang Commands

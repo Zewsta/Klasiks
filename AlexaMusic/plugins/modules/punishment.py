@@ -18,10 +18,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils import get_readable_time
-from KlasikMusic.utils.database import (
+from KlasikMuzik import app
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils import get_readable_time
+from KlasikMuzik.utils.database import (
     add_banned_user,
     get_banned_count,
     get_banned_users,
@@ -29,7 +29,7 @@ from KlasikMusic.utils.database import (
     is_banned_user,
     remove_banned_user,
 )
-from KlasikMusic.utils.decorators.language import language
+from KlasikMuzik.utils.decorators.language import language
 
 # Command
 GBAN_COMMAND = get_command("GBAN_COMMAND")

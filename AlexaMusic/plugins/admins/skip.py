@@ -16,14 +16,14 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
-from KlasikMusic import YouTube, app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.misc import db
-from KlasikMusic.utils.database import get_loop
-from KlasikMusic.utils.decorators import AdminRightsCheck
-from KlasikMusic.utils.inline.play import stream_markup, telegram_markup
-from KlasikMusic.utils.stream.autoclear import auto_clean
-from KlasikMusic.utils.thumbnails import gen_thumb
+from KlasikMuzik import YouTube, app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.misc import db
+from KlasikMuzik.utils.database import get_loop
+from KlasikMuzik.utils.decorators import AdminRightsCheck
+from KlasikMuzik.utils.inline.play import stream_markup, telegram_markup
+from KlasikMuzik.utils.stream.autoclear import auto_clean
+from KlasikMuzik.utils.thumbnails import gen_thumb
 
 # Commands
 SKIP_COMMAND = get_command("SKIP_COMMAND")

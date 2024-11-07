@@ -10,9 +10,9 @@ as you want or you can collabe if you have new ideas.
 """
 
 
-from config import LOG, LOG_GROUP_ID, MUSIC_BOT_NAME
-from KlasikMusic.utils.database import is_on_off
-from KlasikMusic import app
+from config import LOG, LOG_GROUP_ID, Muzik_BOT_NAME
+from KlasikMuzik.utils.database import is_on_off
+from KlasikMuzik import app
 
 
 async def play_logs(message, streamtype):
@@ -23,7 +23,7 @@ async def play_logs(message, streamtype):
             chatusername = "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
         logger_text = f"""
 **━━━━━━━━━━━━━━━**
-**💞 {MUSIC_BOT_NAME} ᴍᴜsɪᴄ ʟᴏɢs **
+**💞 {Muzik_BOT_NAME} ᴍᴜsɪᴄ ʟᴏɢs **
 **━━━━━━━━━━━━━━━**
 **🌹️ 𝐂𝐡𝐚𝐭 𝐍𝐚𝐌𝐞 : >** {message.chat.title} [`{message.chat.id}`]
 **━━━━━━━━━━━━━━━**

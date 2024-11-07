@@ -18,8 +18,8 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
-from config import MUSIC_BOT_NAME, lyrical
-from KlasikMusic import app
+from config import Muzik_BOT_NAME, lyrical
+from KlasikMuzik import app
 
 from ..utils.formatters import convert_bytes, get_readable_time, seconds_to_min
 
@@ -131,7 +131,7 @@ class TeleAPI:
                     completed_size = convert_bytes(current)
                     speed = convert_bytes(speed)
                     text = f"""
-**{MUSIC_BOT_NAME} ᴍᴇᴅɪᴀ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ**
+**{Muzik_BOT_NAME} ᴍᴇᴅɪᴀ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ**
 
 **sɪᴢᴇ:** {total_size}
 **ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ:** {completed_size} 

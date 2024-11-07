@@ -21,8 +21,8 @@ from pyrogram.types import Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from KlasikMusic.utils.database import is_on_off
-from KlasikMusic.utils.formatters import time_to_seconds
+from KlasikMuzik.utils.database import is_on_off
+from KlasikMuzik.utils.formatters import time_to_seconds
 
 
 def cookiefile():

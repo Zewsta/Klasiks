@@ -1,14 +1,14 @@
 <h1 align="center"><b>❤️ 𝘼𝙡𝙚𝙭𝙖 𝙈𝙪𝙨𝙞𝙘 ❤️</b></h1>
 
-<h4 align="center">"Introducing Klasik Music – your smart, powerful, and simple bot for seamless audio and video playback on Telegram. Written in Python with the latest Pyrogram, Klasik Music delivers a superior entertainment experience. Upgrade now for optimal performance and a new level of Telegram enjoyment."<br> ... Working With Pyrogram Latest Version...</h4>
+<h4 align="center">"Introducing Klasik Muzik – your smart, powerful, and simple bot for seamless audio and video playback on Telegram. Written in Python with the latest Pyrogram, Klasik Muzik delivers a superior entertainment experience. Upgrade now for optimal performance and a new level of Telegram enjoyment."<br> ... Working With Pyrogram Latest Version...</h4>
 
 <p align="center"><a href="https://t.me/Jankari_Ki_Duniya"><img src="https://telegra.ph/file/f6064bc90cc76e59015b2.jpg" width="400"></a></p>
 
 <p align="center">
-    <a href="https://github.com/TheTeamKlasik/KlasikMusic"> <img src="https://img.shields.io/github/repo-size/TheTeamKlasik/KlasikMusic?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/TheTeamKlasik/KlasikMusic/commits"> <img src="https://img.shields.io/github/last-commit/TheTeamKlasik/KlasikMusic?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/TheTeamKlasik/KlasikMusic/issues"> <img src="https://img.shields.io/github/issues/TheTeamKlasik/KlasikMusic?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/TheTeamKlasik/KlasikMusic/network/members"> <img src="https://img.shields.io/github/forks/TheTeamKlasik/KlasikMusic?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
+    <a href="https://github.com/TheTeamKlasik/KlasikMuzik"> <img src="https://img.shields.io/github/repo-size/TheTeamKlasik/KlasikMuzik?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/TheTeamKlasik/KlasikMuzik/commits"> <img src="https://img.shields.io/github/last-commit/TheTeamKlasik/KlasikMuzik?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/TheTeamKlasik/KlasikMuzik/issues"> <img src="https://img.shields.io/github/issues/TheTeamKlasik/KlasikMuzik?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/TheTeamKlasik/KlasikMuzik/network/members"> <img src="https://img.shields.io/github/forks/TheTeamKlasik/KlasikMuzik?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
     <a href="https://pypi.org/project/Pyrogram"> <img src="https://img.shields.io/pypi/v/Pyrogram?color=yellow&label=Pyrogram&logo=python&logoColor=green&style=for-the-badge" /></a>
 </p>
 
@@ -33,7 +33,7 @@ Due to YouTube blocking ips, we found a fix. Given below:
 - Gban User | Showing track names when skipping
 - Youtube, Local playback support | Settings panel
 - Control with buttons | Userbot auto join
-- Channel Music Play | Keyboard selection support for youtube play
+- Channel Muzik Play | Keyboard selection support for youtube play
 - Lyrics Scrapper | Unlimited Queue
 - Broadcast Bot | Statistic Collector
 - Block / Unblock (restrict user for using your bot)
@@ -57,11 +57,11 @@ Due to YouTube blocking ips, we found a fix. Given below:
 <summary><b>ᴀᴅᴍɪɴ ᴄᴍᴅs</b></summary>
 <br>
 
-- `/player` - open music player settings panel
+- `/player` - open Muzik player settings panel
 - `/pause` - pause song play
 - `/resume` - resume song play
 - `/skip` - play next song
-- `/end` - stop music play
+- `/end` - stop Muzik play
 - `/ping` - check the bot ping status
 - `/auth` - authorized people to access the admin commands
 - `/deauth` - deauthorized people to access the admin commands
@@ -92,11 +92,11 @@ Due to YouTube blocking ips, we found a fix. Given below:
 
 </details>
 <h1 align="center"><b>❤️ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ ❤️</b></h1>
-Welcome to the KlasikMusic repository, a platform developed by TheTeamKlasik to enhance your music experience through Klasik. With KlasikMusic, you can easily command your Klasik to play your favorite songs, artists, and playlists without lifting a finger.
+Welcome to the KlasikMuzik repository, a platform developed by TheTeamKlasik to enhance your Muzik experience through Klasik. With KlasikMuzik, you can easily command your Klasik to play your favorite songs, artists, and playlists without lifting a finger.
 
-Our development team has worked tirelessly to create a seamless user experience, from integrating various music services to providing custom voice commands for Klasik. We believe that music has the power to bring people together, and our goal is to make it as accessible and enjoyable as possible.
+Our development team has worked tirelessly to create a seamless user experience, from integrating various Muzik services to providing custom voice commands for Klasik. We believe that Muzik has the power to bring people together, and our goal is to make it as accessible and enjoyable as possible.
 
-Through this repository, we hope to share our passion for music and innovation with the world. Whether you're a developer looking to contribute to our open-source project or a music lover excited to try out KlasikMusic, we welcome you to join our community and help us shape the future of music with Klasik.
+Through this repository, we hope to share our passion for Muzik and innovation with the world. Whether you're a developer looking to contribute to our open-source project or a Muzik lover excited to try out KlasikMuzik, we welcome you to join our community and help us shape the future of Muzik with Klasik.
 <summary><b>ʀᴇǫᴜɪʀᴇᴍᴇɴᴛs</b></summary>
 <br>
     
@@ -110,7 +110,7 @@ Through this repository, we hope to share our passion for music and innovation w
 <br>
 ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴅᴇᴘʟᴏʏ ᴀʟᴇxᴀ ᴍᴜsɪᴄ ᴏɴ sᴄᴀʟɪɴɢᴏ ɪɴᴛʀᴏᴅᴜᴄᴇᴅ ʙʏ @ITZ-ZAID
         
-<p><a href="https://my.scalingo.com/deploy?template=https://github.com/TheTeamKlasik/KlasikMusic"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
+<p><a href="https://my.scalingo.com/deploy?template=https://github.com/TheTeamKlasik/KlasikMuzik"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
 
 <summary><b>sᴛʀɪɴɢ sᴇssɪᴏɴ</b></summary>
 <br>
@@ -135,7 +135,7 @@ Through this repository, we hope to share our passion for music and innovation w
 <p><a href="https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FZewsta%2FKlasiks"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="200"/></a></p>
 
 <h4>ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ɪꜰ ʏᴏᴜ ᴀʀᴇ ꜰᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴏʀ  ᴀᴄᴄᴏᴜɴᴛ sᴜsᴘᴇɴsɪᴏɴ ɪssᴜᴇ ᴛᴏ ʙʏᴘᴀss ᴀɴʏ ʀᴇsᴛʀɪᴄᴛɪᴏɴ ᴏɴ ʜᴇʀᴏᴋᴜ ᴏʀ ʀᴀɪʟᴡᴇʏ</h4>    
-<p><a href="https://github.com/TheTeamKlasik/KlasikMusic-Bypass"><img src="https://img.shields.io/badge/Klasik-Music%20Bypass-blue.svg?style=for-the-badge&logo=GitHub"></a></p>
+<p><a href="https://github.com/TheTeamKlasik/KlasikMuzik-Bypass"><img src="https://img.shields.io/badge/Klasik-Muzik%20Bypass-blue.svg?style=for-the-badge&logo=GitHub"></a></p>
 
 <details>
 <summary><b>💻 Lᴏᴄᴀʟ Hᴏsᴛɪɴɢ ᴏʀ VPS 🗄️</b></summary>
@@ -158,7 +158,7 @@ sudo pip3 install -U pip
 
 4. Clone the Repository
 ```console
-git clone https://github.com/TheTeamKlasik/KlasikMusic && cd KlasikMusic
+git clone https://github.com/TheTeamKlasik/KlasikMuzik && cd KlasikMuzik
 ```
 
 5. Install Requirements
@@ -185,7 +185,7 @@ vi .env
 sudo apt install tmux && tmux
 ```
 
-9. Finally Run Klasik Music Bot
+9. Finally Run Klasik Muzik Bot
 ```console
 bash start
 ```
@@ -222,7 +222,7 @@ bash start
 
 # ❤️ Support<
 <a href="https://t.me/Klasik_BotUpdates"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
-<a href="https://t.me/Shayri_Music_Lovers"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
+<a href="https://t.me/Shayri_Muzik_Lovers"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 <a href="https://t.me/Give_Me_Heart"><img src="https://img.shields.io/badge/Give-Me%20Heart-blue.svg?logo=telegram"></a>
 <a href="https://t.me/Klasik_Help"><img src="https://img.shields.io/badge/Give-Me%20Heart-blue.svg?logo=telegram"></a>
 

@@ -68,7 +68,7 @@ admin_27 : "Loop Play අබල කර ඇත"
 # Bot 
 # Start
 start_1 : "Thanks for having me in {0}.\n{1} is alive.\n\nFor any assistance or help, checkout our support group and channel."
-start_2 : "Hello, My name is {0}.\n\nI'm a telegram streaming bot with some useful features. Supporting platforms like Youtube, Spotify, Resso, AppleMusic , Soundcloud etc.\n\nFeel free to add me to your groups."
+start_2 : "Hello, My name is {0}.\n\nI'm a telegram streaming bot with some useful features. Supporting platforms like Youtube, Spotify, Resso, AppleMuzik , Soundcloud etc.\n\nFeel free to add me to your groups."
 start_3 : "Welcome To {0}\n\nI don't need any **admin permission** to work ( until asked for ).\n\nAssistant Username:- @{1}\nAssistant ID:- {2}"
 start_4 : "{0}'s Owner[{1}] has just joined your chat."
 start_5 : "A member of {0}'s Sudo User[{1}] has just joined your chat."
@@ -80,13 +80,13 @@ help_1 : "වැඩි විස්තර සඳහා පහත බොත්ත
 help_2 : "උදව් සඳහා PM වලින් මාව සම්බන්ධ කරගන්න."
 
 # Settings
-setting_1 : "⚙️ **Music Bot Settings**\n\n🖇**Group:** {0}\n🔖**Group ID:** `{1}`\n\n💡**Choose the function buttons from below which you want to edit or change.**"
+setting_1 : "⚙️ **Muzik Bot Settings**\n\n🖇**Group:** {0}\n🔖**Group ID:** `{1}`\n\n💡**Choose the function buttons from below which you want to edit or change.**"
 setting_3 : "⁉️ What is This?\n\n1) Direct: Plays search queries directly. Use -v to play videos in direct mode.\n\n2) Inline: Returns Inline Markup Buttons for choosing between video & audio."
 setting_4 : "⁉️ What is This?\n\n👥 Everyone: Anyone can use admin commands(skip, pause, resume etc) present in this group.\n\n🙍 Admin Only: Only admins and authorized users can use admin commands."
 setting_5 : "No Authorized Users Found\n\nYou can allow any non-admin to use my admin commands by /auth and delete by using /unauth"
 setting_9 : "⁉️ What is This?\n\nWhen activated, Bot will delete its message after {0} to make your chat clean and clear."
-setting_10 : "⁉️ What is This?\n\n1) Group: Plays music in the group where the command is given .\n\n2) Channel: Plays music in the channel you want. Set channel id via /channelplay"
-setting_11 : "⁉️ What is This?\n\n1) Everyone: Anyone present in this group can play music here.\n\n2) Admin Only: Only admins can play the music in this group."
+setting_10 : "⁉️ What is This?\n\n1) Group: Plays Muzik in the group where the command is given .\n\n2) Channel: Plays Muzik in the channel you want. Set channel id via /channelplay"
+setting_11 : "⁉️ What is This?\n\n1) Everyone: Anyone present in this group can play Muzik here.\n\n2) Admin Only: Only admins can play the Muzik in this group."
 setting_12 : "❌ You've no channel id defined for channel mode. Please define with /channelplay."
 setting_13 : "Can't change play mode in active group call. Please stop the voice chat first with /stop."
 setting_14 : "⁉️ What is This?\n\nWhen activated, Bot will delete its executed commands (/play, /pause, /shuffle, /stop etc) immediately.\n\nBot will be requiring delete messages admin right for this to work properly."
@@ -145,7 +145,7 @@ play_10 : "**Youtube Playlist විශේෂාංගය**\n\nඔබට සම�
 play_11 : "📎ශීර්ෂය: **{0}\n\n⏳කාල සීමාව:** {1} Mins"
 play_12 : "**Spotify Playlists**\n\nඉල්ලන ලද්දේ:- {0}"
 play_13 : "**Apple Playlists**\n\nඉල්ලන ලද්දේ:- {0}"
-play_14 : "**URL එක සත්‍යාපනය කළ නොහැක.**\nමෙම url එක පහත සඳහන් ඕනෑම වේදිකාවකට අයත් වේද යන්න පුදුමයට කරුණකි: Youtube, AppleMusic, Spotify, Resso සහ Soundcloud.\n\nඔබට M3u8 හෝ දුරස්ථ සබැඳි සඳහා /stream භාවිතා කළ හැක."
+play_14 : "**URL එක සත්‍යාපනය කළ නොහැක.**\nමෙම url එක පහත සඳහන් ඕනෑම වේදිකාවකට අයත් වේද යන්න පුදුමයට කරුණකි: Youtube, AppleMuzik, Spotify, Resso සහ Soundcloud.\n\nඔබට M3u8 හෝ දුරස්ථ සබැඳි සඳහා /stream භාවිතා කළ හැක."
 play_15 : "**සජීවී ප්‍රවාහය අනාවරණය කර ඇත**\nපද්ධති මඟින් ඔබේ ධාවන සබැඳිය සජීවී ප්‍රවාහයක් ලෙස හඳුනාගෙන ඇත. සජීවී ප්‍රවාහය ක්‍රීඩා කිරීමට අවශ්‍යද?"
 play_16 : "ඛණ්ඩ විස්තර ලබා ගැනීමට අසමත් විය. වෙනත් ඕනෑම සෙල්ලම් කිරීමට උත්සාහ කරන්න."
 play_17 : "Unable to play this type of spotify query!\n\nI can only play spotify tracks, albums, artists and playlists"
@@ -191,7 +191,7 @@ tracks_2 : "**දෝෂය**\n\nඑහෙම නෑ**{0} ඉහළම ධාව�
 # TOOLS
 
 #Lyrics
-lyrics_1 : "**භාවිතය:**\n\n/lyrics [ Music Name]"
+lyrics_1 : "**භාවිතය:**\n\n/lyrics [ Muzik Name]"
 lyrics_2 : "ගී පද සොයමින්"
 lyrics_3 : "❌ පද රචනය ගෙන ඒමට අපොහොසත් විය😭.\n\n💡**සෙවීමට උත්සාහ කළේ:** {0}"
 lyrics_5 : 

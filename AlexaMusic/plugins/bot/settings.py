@@ -19,11 +19,11 @@ from pyrogram.types import (
     Message,
 )
 
-from config import BANNED_USERS, CLEANMODE_DELETE_MINS, MUSIC_BOT_NAME, OWNER_ID
+from config import BANNED_USERS, CLEANMODE_DELETE_MINS, Muzik_BOT_NAME, OWNER_ID
 from strings import get_command
-from KlasikMusic import app
+from KlasikMuzik import app
 from pyrogram.enums import ChatType
-from KlasikMusic.utils.database import (
+from KlasikMuzik.utils.database import (
     add_nonadmin_chat,
     cleanmode_off,
     cleanmode_on,
@@ -47,9 +47,9 @@ from KlasikMusic.utils.database import (
     suggestion_off,
     suggestion_on,
 )
-from KlasikMusic.utils.decorators.admins import ActualAdminCB
-from KlasikMusic.utils.decorators.language import language, languageCB
-from KlasikMusic.utils.inline.settings import (
+from KlasikMuzik.utils.decorators.admins import ActualAdminCB
+from KlasikMuzik.utils.decorators.language import language, languageCB
+from KlasikMuzik.utils.inline.settings import (
     audio_quality_markup,
     auth_users_markup,
     cleanmode_settings_markup,
@@ -57,7 +57,7 @@ from KlasikMusic.utils.inline.settings import (
     setting_markup,
     video_quality_markup,
 )
-from KlasikMusic.utils.inline.start import private_panel
+from KlasikMuzik.utils.inline.start import private_panel
 
 ### Command
 SETTINGS_COMMAND = get_command("SETTINGS_COMMAND")
@@ -105,7 +105,7 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
             OWNER = None
         buttons = private_panel(_, app.username, OWNER)
         return await CallbackQuery.edit_message_text(
-            _["start_2"].format(MUSIC_BOT_NAME),
+            _["start_2"].format(Muzik_BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:

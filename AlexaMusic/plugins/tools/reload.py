@@ -15,14 +15,14 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus
 from pyrogram.types import CallbackQuery, Message
 
-from config import BANNED_USERS, MUSIC_BOT_NAME, adminlist, lyrical
+from config import BANNED_USERS, Muzik_BOT_NAME, adminlist, lyrical
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.misc import db
-from KlasikMusic.utils.database import get_authuser_names, get_cmode
-from KlasikMusic.utils.decorators import ActualAdminCB, AdminActual, language
-from KlasikMusic.utils.formatters import alpha_to_int
+from KlasikMuzik import app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.misc import db
+from KlasikMuzik.utils.database import get_authuser_names, get_cmode
+from KlasikMuzik.utils.decorators import ActualAdminCB, AdminActual, language
+from KlasikMuzik.utils.formatters import alpha_to_int
 
 ### Multi-Lang Commands
 RELOAD_COMMAND = get_command("RELOAD_COMMAND")
@@ -54,7 +54,7 @@ async def reload_admin_cache(client, message: Message, _):
 @AdminActual
 async def restartbot(client, message: Message, _):
     mystic = await message.reply_text(
-        f"ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ ʀᴇʙᴏᴏᴛɪɴɢ {MUSIC_BOT_NAME} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ."
+        f"ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ ʀᴇʙᴏᴏᴛɪɴɢ {Muzik_BOT_NAME} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ."
     )
     await asyncio.sleep(1)
     try:
@@ -74,7 +74,7 @@ async def restartbot(client, message: Message, _):
         except:
             pass
     return await mystic.edit_text(
-        "sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇʙᴏᴏᴛᴇᴅ {MUSIC_BOT_NAME} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ, ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ sᴛᴀʀᴛ ᴩʟᴀʏɪɴɢ ᴀɢᴀɪɴ..."
+        "sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇʙᴏᴏᴛᴇᴅ {Muzik_BOT_NAME} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ, ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ sᴛᴀʀᴛ ᴩʟᴀʏɪɴɢ ᴀɢᴀɪɴ..."
     )
 
 

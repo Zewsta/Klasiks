@@ -11,10 +11,10 @@ as you want or you can collabe if you have new ideas.
 
 from pyrogram import filters
 
-from KlasikMusic import YouTube, app
-from KlasikMusic.utils.channelplay import get_channeplayCB
-from KlasikMusic.utils.decorators.language import languageCB
-from KlasikMusic.utils.stream.stream import stream
+from KlasikMuzik import YouTube, app
+from KlasikMuzik.utils.channelplay import get_channeplayCB
+from KlasikMuzik.utils.decorators.language import languageCB
+from KlasikMuzik.utils.stream.stream import stream
 from config import BANNED_USERS
 
 

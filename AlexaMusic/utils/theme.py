@@ -11,7 +11,7 @@ as you want or you can collabe if you have new ideas.
 
 
 import random
-from KlasikMusic.utils.database import get_theme
+from KlasikMuzik.utils.database import get_theme
 
 themes = [
     "Klasik1",

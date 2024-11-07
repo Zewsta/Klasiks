@@ -15,12 +15,12 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS, MUSIC_BOT_NAME, PING_IMG_URL
+from config import BANNED_USERS, Muzik_BOT_NAME, PING_IMG_URL
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.utils import bot_sys_stats
-from KlasikMusic.utils.decorators.language import language
+from KlasikMuzik import app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.utils import bot_sys_stats
+from KlasikMuzik.utils.decorators.language import language
 
 ### Commands
 PING_COMMAND = get_command("PING_COMMAND")
@@ -38,5 +38,5 @@ async def ping_com(client, message: Message, _):
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(
-        _["ping_2"].format(resp, MUSIC_BOT_NAME, UP, RAM, CPU, DISK, pytgping)
+        _["ping_2"].format(resp, Muzik_BOT_NAME, UP, RAM, CPU, DISK, pytgping)
     )

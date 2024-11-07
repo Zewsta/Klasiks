@@ -14,10 +14,10 @@ from pyrogram import filters
 
 import config
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils.database import autoend_off, autoend_on
-from KlasikMusic.utils.decorators.language import language
+from KlasikMuzik import app
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils.database import autoend_off, autoend_on
+from KlasikMuzik.utils.decorators.language import language
 
 # Commands
 AUTOEND_COMMAND = get_command("AUTOEND_COMMAND")

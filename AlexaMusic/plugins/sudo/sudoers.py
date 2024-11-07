@@ -1,12 +1,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS, MONGO_DB_URI, OWNER_ID, MUSIC_BOT_NAME
+from config import BANNED_USERS, MONGO_DB_URI, OWNER_ID, Muzik_BOT_NAME
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils.database import add_sudo, remove_sudo
-from KlasikMusic.utils.decorators.language import language
+from KlasikMuzik import app
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils.database import add_sudo, remove_sudo
+from KlasikMuzik.utils.decorators.language import language
 
 # Command
 ADDSUDO_COMMAND = get_command("ADDSUDO_COMMAND")
@@ -19,7 +19,7 @@ SUDOUSERS_COMMAND = get_command("SUDOUSERS_COMMAND")
 async def useradd(client, message: Message, _):
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**{MUSIC_BOT_NAME} Gizlilik Sorunları Nedeniyle {MUSIC_BOT_NAME} Veritabanındaki Sudo Kullanıcılarını Yönetemezsiniz‌‌.\n\nBu Özelliği Kullanmak İçin Lütfen Mongo Veritabanınızı Vars'a Ekleyin‌‌**"
+            "**{Muzik_BOT_NAME} Gizlilik Sorunları Nedeniyle {Muzik_BOT_NAME} Veritabanındaki Sudo Kullanıcılarını Yönetemezsiniz‌‌.\n\nBu Özelliği Kullanmak İçin Lütfen Mongo Veritabanınızı Vars'a Ekleyin‌‌**"
         )
     if not message.reply_to_message:
         if len(message.command) != 2:
@@ -57,7 +57,7 @@ async def useradd(client, message: Message, _):
 async def userdel(client, message: Message, _):
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**{MUSIC_BOT_NAME} Gizlilik Sorunları Nedeniyle {MUSIC_BOT_NAME} Veritabanındaki Sudo Kullanıcılarını Yönetemezsiniz‌‌.\n\nBu Özelliği Kullanmak İçin Lütfen Mongo Veritabanınızı Vars'a Ekleyin‌‌**"
+            "**{Muzik_BOT_NAME} Gizlilik Sorunları Nedeniyle {Muzik_BOT_NAME} Veritabanındaki Sudo Kullanıcılarını Yönetemezsiniz‌‌.\n\nBu Özelliği Kullanmak İçin Lütfen Mongo Veritabanınızı Vars'a Ekleyin‌‌**"
         )
     if not message.reply_to_message:
         if len(message.command) != 2:

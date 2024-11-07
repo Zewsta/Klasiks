@@ -1,4 +1,4 @@
-## Klasik Music Assets Folder
+## Klasik Muzik Assets Folder
 
 # Contains all the fonts and thumb related files.
 
@@ -20,12 +20,12 @@ Video.jpeg - Thumbnail Image to be send when someone plays Video files from tele
 
 
 ```console
-Stream.jpeg - Thumbnail Image to be send when someone plays M3u8 or live links on music bot.
+Stream.jpeg - Thumbnail Image to be send when someone plays M3u8 or live links on Muzik bot.
 ```
 - > If you want to change thumb images, make sure your file name "Stream.jpeg" remains same or alternatively you can add a var <br><br> `STREAM_IMG_URL` - Use telegraph link
 
 ```console
-Soundcloud.jpeg - Thumbnail Image to be when send someone plays music from soundcloud.
+Soundcloud.jpeg - Thumbnail Image to be when send someone plays Muzik from soundcloud.
 ```
 - > If you want to change thumb images, make sure your file name "Soundcloud.jpeg" remains same or alternatively you can add a var <br><br> `SOUNCLOUD_IMG_URL` - Use telegraph link
 

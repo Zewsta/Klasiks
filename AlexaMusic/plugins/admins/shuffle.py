@@ -17,9 +17,9 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.misc import db
-from KlasikMusic.utils.decorators import AdminRightsCheck
+from KlasikMuzik import app
+from KlasikMuzik.misc import db
+from KlasikMuzik.utils.decorators import AdminRightsCheck
 
 # Commands
 SHUFFLE_COMMAND = get_command("SHUFFLE_COMMAND")

@@ -14,9 +14,9 @@ from pyrogram.enums import ChatType
 from datetime import datetime, timedelta
 
 import config
-from KlasikMusic import app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.utils.database import (
+from KlasikMuzik import app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.utils.database import (
     get_client,
     is_active_chat,
     is_autoend,
@@ -29,7 +29,7 @@ autoend = {}
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT == str(True):
         while not await asyncio.sleep(config.AUTO_LEAVE_ASSISTANT_TIME):
-            from KlasikMusic.core.userbot import assistants
+            from KlasikMuzik.core.userbot import assistants
 
             for num in assistants:
                 client = await get_client(num)

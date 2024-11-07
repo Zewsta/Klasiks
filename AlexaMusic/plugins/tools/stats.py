@@ -21,13 +21,13 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
-from config import BANNED_USERS, MUSIC_BOT_NAME
+from config import BANNED_USERS, Muzik_BOT_NAME
 from strings import get_command
-from KlasikMusic import YouTube, app
-from KlasikMusic.core.userbot import assistants
-from KlasikMusic.misc import SUDOERS, mongodb
-from KlasikMusic.plugins import ALL_MODULES
-from KlasikMusic.utils.database import (
+from KlasikMuzik import YouTube, app
+from KlasikMuzik.core.userbot import assistants
+from KlasikMuzik.misc import SUDOERS, mongodb
+from KlasikMuzik.plugins import ALL_MODULES
+from KlasikMuzik.utils.database import (
     get_global_tops,
     get_particulars,
     get_queries,
@@ -37,8 +37,8 @@ from KlasikMusic.utils.database import (
     get_top_chats,
     get_topp_users,
 )
-from KlasikMusic.utils.decorators.language import language, languageCB
-from KlasikMusic.utils.inline.stats import (
+from KlasikMuzik.utils.decorators.language import language, languageCB
+from KlasikMuzik.utils.inline.stats import (
     back_stats_buttons,
     back_stats_markup,
     get_stats_markup,
@@ -60,7 +60,7 @@ async def stats_global(client, message: Message, _):
     upl = stats_buttons(_, True if message.from_user.id in SUDOERS else False)
     await message.reply_photo(
         photo=config.STATS_IMG_URL,
-        caption=_["gstats_11"].format(config.MUSIC_BOT_NAME),
+        caption=_["gstats_11"].format(config.Muzik_BOT_NAME),
         reply_markup=upl,
     )
 
@@ -112,7 +112,7 @@ async def gstats_global(client, message: Message, _):
         vidid,
     ) = await YouTube.details(videoid, True)
     title = title.title()
-    final = f"Top Most Played Track on {MUSIC_BOT_NAME}\n\n**Title:** {title}\n\nPlayed** {co} **times"
+    final = f"Top Most Played Track on {Muzik_BOT_NAME}\n\n**Title:** {title}\n\nPlayed** {co} **times"
     upl = get_stats_markup(_, True if message.from_user.id in SUDOERS else False)
     await app.send_photo(
         message.chat.id,
@@ -178,14 +178,14 @@ async def top_users_ten(client, CallbackQuery: CallbackQuery, _):
                 details = stats.get(items)
                 title = (details["title"][:35]).title()
                 if items == "telegram":
-                    msg += f"🌹 [ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/Shayri_Music_Lovers) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
+                    msg += f"🌹 [ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/Shayri_Muzik_Lovers) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
                 else:
                     msg += f"🌹 [{title}](https://www.youtube.com/watch?v={items}) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
 
             temp = (
                 _["gstats_4"].format(
                     queries,
-                    config.MUSIC_BOT_NAME,
+                    config.Muzik_BOT_NAME,
                     len(stats),
                     total_count,
                     limit,
@@ -220,9 +220,9 @@ async def top_users_ten(client, CallbackQuery: CallbackQuery, _):
             limit += 1
             msg += f"💖 `{extract}` ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs ᴏɴ ʙᴏᴛ.\n\n"
         temp = (
-            _["gstats_5"].format(limit, MUSIC_BOT_NAME)
+            _["gstats_5"].format(limit, Muzik_BOT_NAME)
             if what == "Chats"
-            else _["gstats_6"].format(limit, MUSIC_BOT_NAME)
+            else _["gstats_6"].format(limit, Muzik_BOT_NAME)
         )
         msg = temp + msg
     med = InputMediaPhoto(media=config.GLOBAL_IMG_URL, caption=msg)
@@ -410,14 +410,14 @@ async def back_buttons(client, CallbackQuery, _):
         )
         med = InputMediaPhoto(
             media=config.GLOBAL_IMG_URL,
-            caption=_["gstats_10"].format(config.MUSIC_BOT_NAME),
+            caption=_["gstats_10"].format(config.Muzik_BOT_NAME),
         )
         try:
             await CallbackQuery.edit_message_media(media=med, reply_markup=upl)
         except MessageIdInvalid:
             await CallbackQuery.message.reply_photo(
                 photo=config.GLOBAL_IMG_URL,
-                caption=_["gstats_10"].format(config.MUSIC_BOT_NAME),
+                caption=_["gstats_10"].format(config.Muzik_BOT_NAME),
                 reply_markup=upl,
             )
     if command == "GETSTATS":
@@ -427,13 +427,13 @@ async def back_buttons(client, CallbackQuery, _):
         )
         med = InputMediaPhoto(
             media=config.STATS_IMG_URL,
-            caption=_["gstats_11"].format(config.MUSIC_BOT_NAME),
+            caption=_["gstats_11"].format(config.Muzik_BOT_NAME),
         )
         try:
             await CallbackQuery.edit_message_media(media=med, reply_markup=upl)
         except MessageIdInvalid:
             await CallbackQuery.message.reply_photo(
                 photo=config.STATS_IMG_URL,
-                caption=_["gstats_11"].format(config.MUSIC_BOT_NAME),
+                caption=_["gstats_11"].format(config.Muzik_BOT_NAME),
                 reply_markup=upl,
             )

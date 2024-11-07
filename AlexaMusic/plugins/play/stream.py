@@ -16,11 +16,11 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.utils.decorators.play import PlayWrapper
-from KlasikMusic.utils.logger import play_logs
-from KlasikMusic.utils.stream.stream import stream
+from KlasikMuzik import app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.utils.decorators.play import PlayWrapper
+from KlasikMuzik.utils.logger import play_logs
+from KlasikMuzik.utils.stream.stream import stream
 
 # Command
 STREAM_COMMAND = get_command("STREAM_COMMAND")

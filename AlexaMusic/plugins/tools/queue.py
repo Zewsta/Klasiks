@@ -21,12 +21,12 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.misc import db
-from KlasikMusic.utils import Klasikbin, get_channeplayCB, seconds_to_min
-from KlasikMusic.utils.database import get_cmode, is_active_chat, is_music_playing
-from KlasikMusic.utils.decorators.language import language, languageCB
-from KlasikMusic.utils.inline import queue_back_markup, queue_markup
+from KlasikMuzik import app
+from KlasikMuzik.misc import db
+from KlasikMuzik.utils import Klasikbin, get_channeplayCB, seconds_to_min
+from KlasikMuzik.utils.database import get_cmode, is_active_chat, is_Muzik_playing
+from KlasikMuzik.utils.decorators.language import language, languageCB
+from KlasikMuzik.utils.inline import queue_back_markup, queue_markup
 
 ###Commands
 QUEUE_COMMAND = get_command("QUEUE_COMMAND")
@@ -100,7 +100,7 @@ async def ping_com(client, message: Message, _):
         if DUR == "Unknown"
         else "\nᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} ᴩʟᴀʏᴇʀ**
+    cap = f"""**{config.Muzik_BOT_NAME} ᴩʟᴀʏᴇʀ**
 
 📌 **ᴛɪᴛʟᴇ:** {title}
 
@@ -127,7 +127,7 @@ async def ping_com(client, message: Message, _):
                 await asyncio.sleep(5)
                 if await is_active_chat(chat_id):
                     if basic[videoid]:
-                        if await is_music_playing(chat_id):
+                        if await is_Muzik_playing(chat_id):
                             try:
                                 buttons = queue_markup(
                                     _,
@@ -250,7 +250,7 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
         if DUR == "Unknown"
         else "\nᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} ᴩʟᴀʏᴇʀ**
+    cap = f"""**{config.Muzik_BOT_NAME} ᴩʟᴀʏᴇʀ**
 
 📌 **ᴛɪᴛʟᴇ:** {title}
 
@@ -279,7 +279,7 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
                 await asyncio.sleep(5)
                 if await is_active_chat(chat_id):
                     if basic[videoid]:
-                        if await is_music_playing(chat_id):
+                        if await is_Muzik_playing(chat_id):
                             try:
                                 buttons = queue_markup(
                                     _,

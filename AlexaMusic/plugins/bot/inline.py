@@ -17,9 +17,9 @@ from pyrogram.types import (
 )
 from youtubesearchpython.__future__ import VideosSearch
 
-from config import BANNED_USERS, MUSIC_BOT_NAME
-from KlasikMusic import app
-from KlasikMusic.utils.inlinequery import answer
+from config import BANNED_USERS, Muzik_BOT_NAME
+from KlasikMuzik import app
+from KlasikMuzik.utils.inlinequery import answer
 
 
 @app.on_inline_query(~BANNED_USERS)
@@ -63,7 +63,7 @@ async def inline_query_handler(client, query):
 🎥**ᴄʜᴀɴɴᴇʟ:** {channel}
 📎**ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
 
-💖 ** sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {MUSIC_BOT_NAME} **"""
+💖 ** sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {Muzik_BOT_NAME} **"""
             answers.append(
                 InlineQueryResultPhoto(
                     photo_url=thumbnail,

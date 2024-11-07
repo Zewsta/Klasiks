@@ -24,25 +24,25 @@ from config import (
     TELEGRAM_VIDEO_URL,
     adminlist,
 )
-from KlasikMusic import YouTube, app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.misc import SUDOERS, db
-from KlasikMusic.utils.database import (
+from KlasikMuzik import YouTube, app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.misc import SUDOERS, db
+from KlasikMuzik.utils.database import (
     is_active_chat,
-    is_music_playing,
+    is_Muzik_playing,
     is_muted,
     is_nonadmin_chat,
-    music_off,
-    music_on,
+    Muzik_off,
+    Muzik_on,
     mute_off,
     mute_on,
     set_loop,
 )
-from KlasikMusic.utils.decorators.language import languageCB
-from KlasikMusic.utils.formatters import seconds_to_min
-from KlasikMusic.utils.inline.play import panel_markup_1, panel_markup_2, panel_markup_3, stream_markup, telegram_markup
-from KlasikMusic.utils.stream.autoclear import auto_clean
-from KlasikMusic.utils.thumbnails import gen_thumb
+from KlasikMuzik.utils.decorators.language import languageCB
+from KlasikMuzik.utils.formatters import seconds_to_min
+from KlasikMuzik.utils.inline.play import panel_markup_1, panel_markup_2, panel_markup_3, stream_markup, telegram_markup
+from KlasikMuzik.utils.stream.autoclear import auto_clean
+from KlasikMuzik.utils.thumbnails import gen_thumb
 
 wrong = {}
 
@@ -144,19 +144,19 @@ async def del_back_playlist(client, CallbackQuery, _):
                 if CallbackQuery.from_user.id not in admins:
                     return await CallbackQuery.answer(_["admin_19"], show_alert=True)
     if command == "Pause":
-        if not await is_music_playing(chat_id):
+        if not await is_Muzik_playing(chat_id):
             return await CallbackQuery.answer(_["admin_1"], show_alert=True)
         await CallbackQuery.answer()
-        await music_off(chat_id)
+        await Muzik_off(chat_id)
         await Klasik.pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_2"].format(mention), disable_web_page_preview=True
         )
     elif command == "Resume":
-        if await is_music_playing(chat_id):
+        if await is_Muzik_playing(chat_id):
             return await CallbackQuery.answer(_["admin_3"], show_alert=True)
         await CallbackQuery.answer()
-        await music_on(chat_id)
+        await Muzik_on(chat_id)
         await Klasik.resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_4"].format(mention), disable_web_page_preview=True

@@ -11,13 +11,13 @@ as you want or you can collabe if you have new ideas.
 
 
 import asyncio
-from KlasikMusic import app
+from KlasikMuzik import app
 from pyrogram import Client, filters
 from datetime import datetime, timedelta
 from pyrogram.errors import FloodWait
-from KlasikMusic.core.mongo import db as Klasik
+from KlasikMuzik.core.mongo import db as Klasik
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from KlasikMusic.utils.database import get_served_users, get_served_chats
+from KlasikMuzik.utils.database import get_served_users, get_served_chats
 
 
 OWNER_ID = 6174058850

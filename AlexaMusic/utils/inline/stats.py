@@ -12,7 +12,7 @@ as you want or you can collabe if you have new ideas.
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from KlasikMusic import app
+from KlasikMuzik import app
 
 
 def back_stats_markup(_):

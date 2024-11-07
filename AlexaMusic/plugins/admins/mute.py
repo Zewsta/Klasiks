@@ -15,10 +15,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.utils.database import is_muted, mute_on
-from KlasikMusic.utils.decorators import AdminRightsCheck
+from KlasikMuzik import app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.utils.database import is_muted, mute_on
+from KlasikMuzik.utils.decorators import AdminRightsCheck
 
 # Commands
 MUTE_COMMAND = get_command("MUTE_COMMAND")

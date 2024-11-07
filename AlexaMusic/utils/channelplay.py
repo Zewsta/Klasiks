@@ -10,8 +10,8 @@ as you want or you can collabe if you have new ideas.
 """
 
 
-from KlasikMusic import app
-from KlasikMusic.utils.database import get_cmode
+from KlasikMuzik import app
+from KlasikMuzik.utils.database import get_cmode
 
 
 async def get_channeplayCB(_, command, CallbackQuery):

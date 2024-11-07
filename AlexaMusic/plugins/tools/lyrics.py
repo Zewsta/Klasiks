@@ -20,8 +20,8 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS, lyrical
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.utils.decorators.language import language
+from KlasikMuzik import app
+from KlasikMuzik.utils.decorators.language import language
 
 ###Commands
 LYRICS_COMMAND = get_command("LYRICS_COMMAND")

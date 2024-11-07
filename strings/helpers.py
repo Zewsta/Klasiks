@@ -88,8 +88,8 @@ HELP_5 = """🔰**<u>BURASI ÇOK ÖNEMLİ DEĞİL, SADECE BOT YÖNETİCİLERİ �
 /stat - Bot İstatistiklerini Kontrol Edin
 
 ⚠️**<u>KARA LİSTE SOHBET İŞLEVİ:</u>**
-/blacklistchat veya /engelle [CHAT_ID] - Music Bot'u kullanarak yapılan tüm sohbetleri kara listeye alın
-/whitelistchat [CHAT_ID] - Kara listeye alınmış herhangi bir sohbeti Music Bot kullanarak beyaz listeye alın
+/blacklistchat veya /engelle [CHAT_ID] - Muzik Bot'u kullanarak yapılan tüm sohbetleri kara listeye alın
+/whitelistchat [CHAT_ID] - Kara listeye alınmış herhangi bir sohbeti Muzik Bot kullanarak beyaz listeye alın
 /blacklistedchat veya /engelliler- Kara listeye alınan tüm sohbetleri kontrol edin.
 
 👤**<u>ENGELLEME FONKSİYONU:</u>**

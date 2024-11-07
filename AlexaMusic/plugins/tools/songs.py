@@ -25,10 +25,10 @@ from pyrogram.types import (
 
 from config import BANNED_USERS, SONG_DOWNLOAD_DURATION, SONG_DOWNLOAD_DURATION_LIMIT
 from strings import get_command
-from KlasikMusic import YouTube, app
-from KlasikMusic.utils.decorators.language import language, languageCB
-from KlasikMusic.utils.formatters import convert_bytes
-from KlasikMusic.utils.inline.song import song_markup
+from KlasikMuzik import YouTube, app
+from KlasikMuzik.utils.decorators.language import language, languageCB
+from KlasikMuzik.utils.formatters import convert_bytes
+from KlasikMuzik.utils.inline.song import song_markup
 
 # Command
 SONG_COMMAND = get_command("SONG_COMMAND")
@@ -174,7 +174,7 @@ async def song_helper_cb(client, CallbackQuery, _):
             print(e)
             return await CallbackQuery.edit_message_text(_["song_7"])
         keyboard = InlineKeyboard()
-        # AVC Formats Only [ Klasik MUSIC BOT ]
+        # AVC Formats Only [ Klasik Muzik BOT ]
         done = [160, 133, 134, 135, 136, 137, 298, 299, 264, 304, 266]
         for x in formats_available:
             check = x["format"]

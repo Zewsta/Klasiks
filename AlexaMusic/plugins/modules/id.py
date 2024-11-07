@@ -9,7 +9,7 @@ This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
 """
 
-from KlasikMusic import app
+from KlasikMuzik import app
 from pyrogram import filters
 
 

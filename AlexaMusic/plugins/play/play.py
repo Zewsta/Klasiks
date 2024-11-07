@@ -17,26 +17,26 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from KlasikMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.utils import seconds_to_min, time_to_seconds
-from KlasikMusic.utils.channelplay import get_channeplayCB
-from KlasikMusic.utils.database import is_video_allowed
-from KlasikMusic.utils.decorators.language import languageCB
-from KlasikMusic.utils.decorators.play import PlayWrapper
-from KlasikMusic.utils.formatters import formats
-from KlasikMusic.utils.inline.play import (
+from KlasikMuzik import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.utils import seconds_to_min, time_to_seconds
+from KlasikMuzik.utils.channelplay import get_channeplayCB
+from KlasikMuzik.utils.database import is_video_allowed
+from KlasikMuzik.utils.decorators.language import languageCB
+from KlasikMuzik.utils.decorators.play import PlayWrapper
+from KlasikMuzik.utils.formatters import formats
+from KlasikMuzik.utils.inline.play import (
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from KlasikMusic.utils.inline.playlist import botplaylist_markup
-from KlasikMusic.utils.logger import play_logs
-from KlasikMusic.utils.stream.stream import stream
+from KlasikMuzik.utils.inline.playlist import botplaylist_markup
+from KlasikMuzik.utils.logger import play_logs
+from KlasikMuzik.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 from strings import get_command
-from KlasikMusic.utils.database import is_served_user
+from KlasikMuzik.utils.database import is_served_user
 
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
@@ -443,9 +443,9 @@ async def play_commnd(
                 return await play_logs(message, streamtype=f"URL Searched Inline")
 
 
-@app.on_callback_query(filters.regex("MusicStream") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("MuzikStream") & ~BANNED_USERS)
 @languageCB
-async def play_music(client, CallbackQuery, _):
+async def play_Muzik(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
     vidid, user_id, mode, cplay, fplay = callback_request.split("|")

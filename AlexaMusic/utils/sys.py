@@ -14,7 +14,7 @@ import time
 
 import psutil
 
-from KlasikMusic.misc import _boot_
+from KlasikMuzik.misc import _boot_
 
 from .formatters import get_readable_time
 

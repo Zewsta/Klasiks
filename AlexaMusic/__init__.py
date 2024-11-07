@@ -10,12 +10,12 @@ as you want or you can collabe if you have new ideas.
 """
 
 
-from KlasikMusic.core.bot import KlasikBot
-from KlasikMusic.core.dir import dirr
-from KlasikMusic.core.cookies import save_cookies
-from KlasikMusic.core.git import git
-from KlasikMusic.core.userbot import Userbot
-from KlasikMusic.misc import dbb, heroku
+from KlasikMuzik.core.bot import KlasikBot
+from KlasikMuzik.core.dir import dirr
+from KlasikMuzik.core.cookies import save_cookies
+from KlasikMuzik.core.git import git
+from KlasikMuzik.core.userbot import Userbot
+from KlasikMuzik.misc import dbb, heroku
 
 from .logging import LOGGER
 

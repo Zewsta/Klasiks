@@ -21,9 +21,9 @@ import config
 from config import adminlist, chatstats, clean, userstats
 from pyrogram.enums import ChatMembersFilter
 from strings import get_command
-from KlasikMusic import app, userbot
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils.database import (
+from KlasikMuzik import app, userbot
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
@@ -36,8 +36,8 @@ from KlasikMusic.utils.database import (
     update_particular_top,
     update_user_top,
 )
-from KlasikMusic.utils.decorators.language import language
-from KlasikMusic.utils.formatters import alpha_to_int
+from KlasikMuzik.utils.decorators.language import language
+from KlasikMuzik.utils.formatters import alpha_to_int
 from config import OWNER_ID
 
 BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
@@ -171,7 +171,7 @@ async def braodcast_message(client, message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_2"])
         text = _["broad_3"]
-        from KlasikMusic.core.userbot import assistants
+        from KlasikMuzik.core.userbot import assistants
 
         for num in assistants:
             sent = 0

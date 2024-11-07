@@ -15,15 +15,15 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, adminlist
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.utils.database import (
+from KlasikMuzik import app
+from KlasikMuzik.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from KlasikMusic.utils.decorators import AdminActual, language
-from KlasikMusic.utils.formatters import int_to_alpha
+from KlasikMuzik.utils.decorators import AdminActual, language
+from KlasikMuzik.utils.formatters import int_to_alpha
 
 # Command
 AUTH_COMMAND = get_command("AUTH_COMMAND")

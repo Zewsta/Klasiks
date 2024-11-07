@@ -16,10 +16,10 @@ from pyrogram import filters
 
 import config
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils.database.memorydatabase import get_video_limit
-from KlasikMusic.utils.formatters import convert_bytes
+from KlasikMuzik import app
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils.database.memorydatabase import get_video_limit
+from KlasikMuzik.utils.formatters import convert_bytes
 
 VARS_COMMAND = get_command("VARS_COMMAND")
 
@@ -28,7 +28,7 @@ VARS_COMMAND = get_command("VARS_COMMAND")
 async def varsFunc(client, message):
     mystic = await message.reply_text("ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ... ɢᴇᴛᴛɪɴɢ ʏᴏᴜʀ ᴄᴏɴғɪɢ ᴠᴀʀɪᴀʙʟᴇs...")
     v_limit = await get_video_limit()
-    bot_name = config.MUSIC_BOT_NAME
+    bot_name = config.Muzik_BOT_NAME
     up_r = f"[ʀᴇᴩᴏ]({config.UPSTREAM_REPO})"
     up_b = config.UPSTREAM_BRANCH
     auto_leave = config.AUTO_LEAVE_ASSISTANT_TIME

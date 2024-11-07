@@ -90,7 +90,7 @@ async def gen_thumb(videoid):
         name_font = ImageFont.truetype("assets/font.ttf", 30)
         para = textwrap.wrap(title, width=30)
         j = 0
-        draw.text((5, 5), f"Klasik MusicBot", fill="white", font=name_font)
+        draw.text((5, 5), f"Klasik MuzikBot", fill="white", font=name_font)
         draw.text(
             (600, 150),
             "NOW PLAYING",
@@ -206,7 +206,7 @@ async def gen_qthumb(videoid):
         name_font = ImageFont.truetype("assets/font.ttf", 30)
         para = textwrap.wrap(title, width=30)
         j = 0
-        draw.text((5, 5), f"Klasik MusicBot", fill="white", font=name_font)
+        draw.text((5, 5), f"Klasik MuzikBot", fill="white", font=name_font)
         draw.text(
             (600, 150),
             "ADDED THIS SONG IN QUEUE",

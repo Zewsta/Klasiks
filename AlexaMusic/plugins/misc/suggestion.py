@@ -17,8 +17,8 @@ from datetime import datetime, timedelta
 import config
 from config import clean
 from strings import get_string
-from KlasikMusic import app
-from KlasikMusic.utils.database import (
+from KlasikMuzik import app
+from KlasikMuzik.utils.database import (
     get_lang,
     get_private_served_chats,
     get_served_chats,

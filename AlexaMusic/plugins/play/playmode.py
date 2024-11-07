@@ -15,10 +15,10 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS
 from strings import get_command
-from KlasikMusic import app
-from KlasikMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from KlasikMusic.utils.decorators import language
-from KlasikMusic.utils.inline.settings import playmode_users_markup
+from KlasikMuzik import app
+from KlasikMuzik.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from KlasikMuzik.utils.decorators import language
+from KlasikMuzik.utils.inline.settings import playmode_users_markup
 
 ### Commands
 PLAYMODE_COMMAND = get_command("PLAYMODE_COMMAND")

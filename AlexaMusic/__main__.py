@@ -18,11 +18,11 @@ from pytgcalls.exceptions import NoActiveGroupCall, GroupCallNotFound
 
 import config
 from config import BANNED_USERS
-from KlasikMusic import LOGGER, app, userbot
-from KlasikMusic.core.call import Klasik
-from KlasikMusic.misc import sudo
-from KlasikMusic.plugins import ALL_MODULES
-from KlasikMusic.utils.database import get_banned_users, get_gbanned
+from KlasikMuzik import LOGGER, app, userbot
+from KlasikMuzik.core.call import Klasik
+from KlasikMuzik.misc import sudo
+from KlasikMuzik.plugins import ALL_MODULES
+from KlasikMuzik.utils.database import get_banned_users, get_gbanned
 
 
 async def init():
@@ -33,7 +33,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER("KlasikMusic").error("Add Pyrogram string session and then try...")
+        LOGGER("KlasikMuzik").error("Add Pyrogram string session and then try...")
         sys.exit()
     await sudo()
     try:
@@ -47,27 +47,27 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("KlasikMusic.plugins" + all_module)
-    LOGGER("KlasikMusic.plugins").info("Necessary Modules Imported Successfully.")
+        importlib.import_module("KlasikMuzik.plugins" + all_module)
+    LOGGER("KlasikMuzik.plugins").info("Necessary Modules Imported Successfully.")
     await userbot.start()
     await Klasik.start()
     try:
         await Klasik.stream_call("https://telegra.ph/file/b60b80ccb06f7a48f68b5.mp4")
     except (NoActiveGroupCall, GroupCallNotFound):
-        LOGGER("KlasikMusic").error(
+        LOGGER("KlasikMuzik").error(
             "[ERROR] - \n\nTurn on group voice chat and don't put it off otherwise I'll stop working thanks."
         )
         sys.exit()
     except:
         pass
     await Klasik.decorators()
-    LOGGER("KlasikMusic").info("Klasik Music Bot Started Successfully")
+    LOGGER("KlasikMuzik").info("Klasik Muzik Bot Started Successfully")
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("KlasikMusic").info("Stopping Klasik Music Bot...")
+    LOGGER("KlasikMuzik").info("Stopping Klasik Muzik Bot...")
 
 
 if __name__ == "__main__":
     app.run(init())
-    LOGGER("KlasikMusic").info("Stopping Music Bot")
+    LOGGER("KlasikMuzik").info("Stopping Muzik Bot")

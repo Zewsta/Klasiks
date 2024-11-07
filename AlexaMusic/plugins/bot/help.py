@@ -17,12 +17,12 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS
 from strings import get_command, get_string, helpers
-from KlasikMusic import app
-from KlasikMusic.misc import SUDOERS
-from KlasikMusic.utils import help_pannel
-from KlasikMusic.utils.database import get_lang, is_commanddelete_on
-from KlasikMusic.utils.decorators.language import LanguageStart, languageCB
-from KlasikMusic.utils.inline.help import help_back_markup, private_help_panel
+from KlasikMuzik import app
+from KlasikMuzik.misc import SUDOERS
+from KlasikMuzik.utils import help_pannel
+from KlasikMuzik.utils.database import get_lang, is_commanddelete_on
+from KlasikMuzik.utils.decorators.language import LanguageStart, languageCB
+from KlasikMuzik.utils.inline.help import help_back_markup, private_help_panel
 
 ### Command
 HELP_COMMAND = get_command("HELP_COMMAND")

@@ -1,14 +1,14 @@
 {
-    "name": "Klasik Music",
-    "description": "Deploy Klasik music on railwey make sure to star the projecte.",
+    "name": "Klasik Muzik",
+    "description": "Deploy Klasik Muzik on railwey make sure to star the projecte.",
     "logo": "https://telegra.ph/file/ba967503682a55beaedd3.png",
     "keywords": [
     "python3",
     "telegram",
     "bot",
     "Klasik",
-    "Klasikmusic",
-    "Klasikmusicbot",
+    "KlasikMuzik",
+    "KlasikMuzikbot",
     "pyrogram"
     ],
     "env": {
@@ -37,8 +37,8 @@
         "value": "",
         "required": true
       },
-      "MUSIC_BOT_NAME": {
-        "description": "A name for your Music Bot.",
+      "Muzik_BOT_NAME": {
+        "description": "A name for your Muzik Bot.",
         "value": "",
         "required": true
       },
@@ -59,7 +59,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/TheTeamKlasik/KlasikMusic",
+        "value": "https://github.com/TheTeamKlasik/KlasikMuzik",
         "required": false
       },
       "LOG_GROUP_ID": {

@@ -1,15 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
-
 from datetime import datetime
 
 from pyrogram import filters
@@ -29,9 +17,8 @@ PING_COMMAND = get_command("PING_COMMAND")
 @app.on_message(filters.command(PING_COMMAND) & filters.group & ~BANNED_USERS)
 @language
 async def ping_com(client, message: Message, _):
-    response = await message.reply_photo(
-        photo=PING_IMG_URL,
-        caption=_["ping_1"],
+    response = await message.reply_text(
+        text=_["ping_1"],
     )
     start = datetime.now()
     pytgping = await Klasik.ping()

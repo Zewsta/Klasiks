@@ -23,7 +23,7 @@ from KlasikMuzik.utils.database import (
     remove_active_video_chat,
 )
 from KlasikMuzik.utils.decorators.language import language
-from KlasikMuzik.utils.pastebin import Alexabin
+from KlasikMuzik.utils.pastebin import Klasikbin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")

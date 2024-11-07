@@ -3,10 +3,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, MONGO_DB_URI, OWNER_ID, MUSIC_BOT_NAME
 from strings import get_command
-from AlexaMusic import app
-from AlexaMusic.misc import SUDOERS
-from AlexaMusic.utils.database import add_sudo, remove_sudo
-from AlexaMusic.utils.decorators.language import language
+from KlasikMusic import app
+from KlasikMusic.misc import SUDOERS
+from KlasikMusic.utils.database import add_sudo, remove_sudo
+from KlasikMusic.utils.decorators.language import language
 
 # Command
 ADDSUDO_COMMAND = get_command("ADDSUDO_COMMAND")

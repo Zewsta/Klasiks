@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -14,15 +14,15 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
 
-from AlexaMusic import app
-from AlexaMusic.utils.database import get_global_tops, get_particulars, get_userss
-from AlexaMusic.utils.decorators.language import languageCB
-from AlexaMusic.utils.inline.playlist import (
+from KlasikMusic import app
+from KlasikMusic.utils.database import get_global_tops, get_particulars, get_userss
+from KlasikMusic.utils.decorators.language import languageCB
+from KlasikMusic.utils.inline.playlist import (
     botplaylist_markup,
     failed_top_markup,
     top_play_markup,
 )
-from AlexaMusic.utils.stream.stream import stream
+from KlasikMusic.utils.stream.stream import stream
 from config import BANNED_USERS
 
 loop = asyncio.get_running_loop()

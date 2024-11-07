@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -20,11 +20,11 @@ from pyrogram.errors import (
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
-from AlexaMusic.misc import db
+from KlasikMusic.misc import db
 from strings import get_string
-from AlexaMusic import YouTube, app
-from AlexaMusic.misc import SUDOERS
-from AlexaMusic.utils.database import (
+from KlasikMusic import YouTube, app
+from KlasikMusic.misc import SUDOERS
+from KlasikMusic.utils.database import (
     get_cmode,
     get_lang,
     get_playmode,
@@ -34,8 +34,8 @@ from AlexaMusic.utils.database import (
     is_commanddelete_on,
     is_served_private_chat,
 )
-from AlexaMusic.utils.database.memorydatabase import is_maintenance
-from AlexaMusic.utils.inline.playlist import botplaylist_markup
+from KlasikMusic.utils.database.memorydatabase import is_maintenance
+from KlasikMusic.utils.inline.playlist import botplaylist_markup
 
 links = {}
 

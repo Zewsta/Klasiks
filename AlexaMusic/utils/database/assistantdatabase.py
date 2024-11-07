@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -11,8 +11,8 @@ as you want or you can collabe if you have new ideas.
 
 import random
 
-from AlexaMusic import userbot
-from AlexaMusic.core.mongo import mongodb
+from KlasikMusic import userbot
+from KlasikMusic.core.mongo import mongodb
 
 db = mongodb.assistants
 
@@ -33,7 +33,7 @@ async def get_client(assistant: int):
 
 
 async def set_assistant(chat_id):
-    from AlexaMusic.core.userbot import assistants
+    from KlasikMusic.core.userbot import assistants
 
     ran_assistant = random.choice(assistants)
     assistantdict[chat_id] = ran_assistant
@@ -47,7 +47,7 @@ async def set_assistant(chat_id):
 
 
 async def get_assistant(chat_id: int) -> str:
-    from AlexaMusic.core.userbot import assistants
+    from KlasikMusic.core.userbot import assistants
 
     assistant = assistantdict.get(chat_id)
     if not assistant:
@@ -74,7 +74,7 @@ async def get_assistant(chat_id: int) -> str:
 
 
 async def set_calls_assistant(chat_id):
-    from AlexaMusic.core.userbot import assistants
+    from KlasikMusic.core.userbot import assistants
 
     ran_assistant = random.choice(assistants)
     assistantdict[chat_id] = ran_assistant
@@ -87,7 +87,7 @@ async def set_calls_assistant(chat_id):
 
 
 async def group_assistant(self, chat_id: int) -> int:
-    from AlexaMusic.core.userbot import assistants
+    from KlasikMusic.core.userbot import assistants
 
     assistant = assistantdict.get(chat_id)
     if not assistant:

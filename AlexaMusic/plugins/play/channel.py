@@ -1,21 +1,21 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with a variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with a variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collab if you have new ideas.
 """
 
-from AlexaMusic import app
+from KlasikMusic import app
 from pyrogram import filters
 from config import BANNED_USERS
 from strings import get_command
 from pyrogram.types import Message
-from AlexaMusic.utils.database import set_cmode
-from AlexaMusic.utils.decorators.admins import AdminActual
+from KlasikMusic.utils.database import set_cmode
+from KlasikMusic.utils.decorators.admins import AdminActual
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 
 ### Multi-Lang Commands

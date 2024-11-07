@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -16,15 +16,15 @@ from pyrogram.types import InlineKeyboardMarkup
 from datetime import datetime, timedelta
 
 from strings import get_string
-from AlexaMusic.misc import db
-from AlexaMusic.utils.database import (
+from KlasikMusic.misc import db
+from KlasikMusic.utils.database import (
     get_active_chats,
     get_lang,
     is_music_playing,
     get_assistant,
 )
-from AlexaMusic.utils.formatters import seconds_to_min
-from AlexaMusic.utils.inline import stream_markup_timer, telegram_markup_timer
+from KlasikMusic.utils.formatters import seconds_to_min
+from KlasikMusic.utils.inline import stream_markup_timer, telegram_markup_timer
 
 from ..admins.callback import wrong
 from .autoleave import autoend

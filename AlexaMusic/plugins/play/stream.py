@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -16,11 +16,11 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS
 from strings import get_command
-from AlexaMusic import app
-from AlexaMusic.core.call import Alexa
-from AlexaMusic.utils.decorators.play import PlayWrapper
-from AlexaMusic.utils.logger import play_logs
-from AlexaMusic.utils.stream.stream import stream
+from KlasikMusic import app
+from KlasikMusic.core.call import Klasik
+from KlasikMusic.utils.decorators.play import PlayWrapper
+from KlasikMusic.utils.logger import play_logs
+from KlasikMusic.utils.stream.stream import stream
 
 # Command
 STREAM_COMMAND = get_command("STREAM_COMMAND")
@@ -44,7 +44,7 @@ async def stream_command(
             _["play_2"].format(channel) if channel else _["play_1"]
         )
         try:
-            await Alexa.stream_call(url)
+            await Klasik.stream_call(url)
         except NoActiveGroupCall:
             await mystic.edit_text(
                 "ᴛʜᴇʀᴇ's ᴀɴ ɪssᴜᴇ ᴡɪᴛʜ ᴛʜᴇ ʙᴏᴛ. ᴘʟᴇᴀsᴇ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ ᴀɴᴅ ᴀsᴋ ᴛʜᴇᴍ ᴛᴏ ᴄʜᴇᴄᴋ ʟᴏɢɢᴇʀ ɢʀᴏᴜᴘ."

@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -17,26 +17,26 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from AlexaMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from AlexaMusic.core.call import Alexa
-from AlexaMusic.utils import seconds_to_min, time_to_seconds
-from AlexaMusic.utils.channelplay import get_channeplayCB
-from AlexaMusic.utils.database import is_video_allowed
-from AlexaMusic.utils.decorators.language import languageCB
-from AlexaMusic.utils.decorators.play import PlayWrapper
-from AlexaMusic.utils.formatters import formats
-from AlexaMusic.utils.inline.play import (
+from KlasikMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from KlasikMusic.core.call import Klasik
+from KlasikMusic.utils import seconds_to_min, time_to_seconds
+from KlasikMusic.utils.channelplay import get_channeplayCB
+from KlasikMusic.utils.database import is_video_allowed
+from KlasikMusic.utils.decorators.language import languageCB
+from KlasikMusic.utils.decorators.play import PlayWrapper
+from KlasikMusic.utils.formatters import formats
+from KlasikMusic.utils.inline.play import (
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from AlexaMusic.utils.inline.playlist import botplaylist_markup
-from AlexaMusic.utils.logger import play_logs
-from AlexaMusic.utils.stream.stream import stream
+from KlasikMusic.utils.inline.playlist import botplaylist_markup
+from KlasikMusic.utils.logger import play_logs
+from KlasikMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 from strings import get_command
-from AlexaMusic.utils.database import is_served_user
+from KlasikMusic.utils.database import is_served_user
 
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
@@ -294,7 +294,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await Alexa.stream_call(url)
+                await Klasik.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(
                     "ᴛʜᴇʀᴇ's ᴀɴ ᴇʀʀᴏʀ ɪɴ ᴛʜᴇ ʙᴏᴛ, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴛᴏ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴀs sᴏᴏɴ ᴀs ᴩᴏssɪʙʟᴇ."
@@ -523,7 +523,7 @@ async def anonymous_check(client, CallbackQuery):
         return
 
 
-@app.on_callback_query(filters.regex("AlexaPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("KlasikPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()

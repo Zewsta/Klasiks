@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -24,10 +24,10 @@ from config import (
     TELEGRAM_VIDEO_URL,
     adminlist,
 )
-from AlexaMusic import YouTube, app
-from AlexaMusic.core.call import Alexa
-from AlexaMusic.misc import SUDOERS, db
-from AlexaMusic.utils.database import (
+from KlasikMusic import YouTube, app
+from KlasikMusic.core.call import Klasik
+from KlasikMusic.misc import SUDOERS, db
+from KlasikMusic.utils.database import (
     is_active_chat,
     is_music_playing,
     is_muted,
@@ -38,11 +38,11 @@ from AlexaMusic.utils.database import (
     mute_on,
     set_loop,
 )
-from AlexaMusic.utils.decorators.language import languageCB
-from AlexaMusic.utils.formatters import seconds_to_min
-from AlexaMusic.utils.inline.play import panel_markup_1, panel_markup_2, panel_markup_3, stream_markup, telegram_markup
-from AlexaMusic.utils.stream.autoclear import auto_clean
-from AlexaMusic.utils.thumbnails import gen_thumb
+from KlasikMusic.utils.decorators.language import languageCB
+from KlasikMusic.utils.formatters import seconds_to_min
+from KlasikMusic.utils.inline.play import panel_markup_1, panel_markup_2, panel_markup_3, stream_markup, telegram_markup
+from KlasikMusic.utils.stream.autoclear import auto_clean
+from KlasikMusic.utils.thumbnails import gen_thumb
 
 wrong = {}
 
@@ -148,7 +148,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_1"], show_alert=True)
         await CallbackQuery.answer()
         await music_off(chat_id)
-        await Alexa.pause_stream(chat_id)
+        await Klasik.pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_2"].format(mention), disable_web_page_preview=True
         )
@@ -157,13 +157,13 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_3"], show_alert=True)
         await CallbackQuery.answer()
         await music_on(chat_id)
-        await Alexa.resume_stream(chat_id)
+        await Klasik.resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_4"].format(mention), disable_web_page_preview=True
         )
     elif command == "Stop" or command == "End":
         await CallbackQuery.answer()
-        await Alexa.stop_stream(chat_id)
+        await Klasik.stop_stream(chat_id)
         await set_loop(chat_id, 0)
         await CallbackQuery.message.reply_text(
             _["admin_9"].format(mention), disable_web_page_preview=True
@@ -173,7 +173,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_5"], show_alert=True)
         await CallbackQuery.answer()
         await mute_on(chat_id)
-        await Alexa.mute_stream(chat_id)
+        await Klasik.mute_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_6"].format(mention), disable_web_page_preview=True
         )
@@ -182,7 +182,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_7"], show_alert=True)
         await CallbackQuery.answer()
         await mute_off(chat_id)
-        await Alexa.unmute_stream(chat_id)
+        await Klasik.unmute_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_8"].format(mention), disable_web_page_preview=True
         )
@@ -223,7 +223,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     _["admin_10"].format(mention), disable_web_page_preview=True
                 )
                 try:
-                    return await Alexa.stop_stream(chat_id)
+                    return await Klasik.stop_stream(chat_id)
                 except:
                     return
         except:
@@ -232,7 +232,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 await CallbackQuery.message.reply_text(
                     _["admin_10"].format(mention), disable_web_page_preview=True
                 )
-                return await Alexa.stop_stream(chat_id)
+                return await Klasik.stop_stream(chat_id)
             except:
                 return
         await CallbackQuery.answer()
@@ -253,7 +253,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     _["admin_11"].format(title)
                 )
             try:
-                await Alexa.skip_stream(chat_id, link, video=status)
+                await Klasik.skip_stream(chat_id, link, video=status)
             except Exception:
                 return await CallbackQuery.message.reply_text(_["call_9"])
             button = telegram_markup(_, chat_id)
@@ -282,7 +282,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 return await mystic.edit_text(_["call_9"])
             try:
-                await Alexa.skip_stream(chat_id, file_path, video=status)
+                await Klasik.skip_stream(chat_id, file_path, video=status)
             except Exception:
                 return await mystic.edit_text(_["call_9"])
             button = stream_markup(_, videoid, chat_id)
@@ -302,7 +302,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await mystic.delete()
         elif "index_" in queued:
             try:
-                await Alexa.skip_stream(chat_id, videoid, video=status)
+                await Klasik.skip_stream(chat_id, videoid, video=status)
             except Exception:
                 return await CallbackQuery.message.reply_text(_["call_9"])
             button = telegram_markup(_, chat_id)
@@ -315,7 +315,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await CallbackQuery.edit_message_text(txt)
         else:
             try:
-                await Alexa.skip_stream(chat_id, queued, video=status)
+                await Klasik.skip_stream(chat_id, queued, video=status)
             except Exception:
                 return await CallbackQuery.message.reply_text(_["call_9"])
             if videoid == "telegram":
@@ -388,7 +388,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             if n == 0:
                 return await mystic.edit_text(_["admin_30"])
         try:
-            await Alexa.seek_stream(
+            await Klasik.seek_stream(
                 chat_id,
                 file_path,
                 seconds_to_min(to_seek),

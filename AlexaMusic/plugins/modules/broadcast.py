@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -21,9 +21,9 @@ import config
 from config import adminlist, chatstats, clean, userstats
 from pyrogram.enums import ChatMembersFilter
 from strings import get_command
-from AlexaMusic import app, userbot
-from AlexaMusic.misc import SUDOERS
-from AlexaMusic.utils.database import (
+from KlasikMusic import app, userbot
+from KlasikMusic.misc import SUDOERS
+from KlasikMusic.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
@@ -36,8 +36,8 @@ from AlexaMusic.utils.database import (
     update_particular_top,
     update_user_top,
 )
-from AlexaMusic.utils.decorators.language import language
-from AlexaMusic.utils.formatters import alpha_to_int
+from KlasikMusic.utils.decorators.language import language
+from KlasikMusic.utils.formatters import alpha_to_int
 from config import OWNER_ID
 
 BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
@@ -171,7 +171,7 @@ async def braodcast_message(client, message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_2"])
         text = _["broad_3"]
-        from AlexaMusic.core.userbot import assistants
+        from KlasikMusic.core.userbot import assistants
 
         for num in assistants:
             sent = 0

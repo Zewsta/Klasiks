@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -14,9 +14,9 @@ from pyrogram.enums import ChatType
 from datetime import datetime, timedelta
 
 import config
-from AlexaMusic import app
-from AlexaMusic.core.call import Alexa
-from AlexaMusic.utils.database import (
+from KlasikMusic import app
+from KlasikMusic.core.call import Klasik
+from KlasikMusic.utils.database import (
     get_client,
     is_active_chat,
     is_autoend,
@@ -29,7 +29,7 @@ autoend = {}
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT == str(True):
         while not await asyncio.sleep(config.AUTO_LEAVE_ASSISTANT_TIME):
-            from AlexaMusic.core.userbot import assistants
+            from KlasikMusic.core.userbot import assistants
 
             for num in assistants:
                 client = await get_client(num)
@@ -74,7 +74,7 @@ async def auto_end():
                     members.append(member)
                 if len(members) <= 1:
                     try:
-                        await Alexa.stop_stream(chat_id)
+                        await Klasik.stop_stream(chat_id)
                     except Exception:
                         pass
                     try:

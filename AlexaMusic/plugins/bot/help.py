@@ -1,9 +1,9 @@
-# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+TheTeamKlasik is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -17,12 +17,12 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS
 from strings import get_command, get_string, helpers
-from AlexaMusic import app
-from AlexaMusic.misc import SUDOERS
-from AlexaMusic.utils import help_pannel
-from AlexaMusic.utils.database import get_lang, is_commanddelete_on
-from AlexaMusic.utils.decorators.language import LanguageStart, languageCB
-from AlexaMusic.utils.inline.help import help_back_markup, private_help_panel
+from KlasikMusic import app
+from KlasikMusic.misc import SUDOERS
+from KlasikMusic.utils import help_pannel
+from KlasikMusic.utils.database import get_lang, is_commanddelete_on
+from KlasikMusic.utils.decorators.language import LanguageStart, languageCB
+from KlasikMusic.utils.inline.help import help_back_markup, private_help_panel
 
 ### Command
 HELP_COMMAND = get_command("HELP_COMMAND")

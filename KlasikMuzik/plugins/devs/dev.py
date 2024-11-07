@@ -1,15 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
-
 import os
 import re
 import subprocess
@@ -82,7 +70,7 @@ async def executor(client: app, message: Message):
         evaluation += stdout
     else:
         evaluation += "Success"
-    final_output = f"<b>⥤ ʀᴇsᴜʟᴛ :</b>\n<pre language='python'>{evaluation}</pre>"
+    final_output = f"<b>⥤ Sonuç:</b>\n<pre language='python'>{evaluation}</pre>"
     if len(final_output) > 4096:
         filename = "output.txt"
         with open(filename, "w+", encoding="utf8") as out_file:
@@ -100,7 +88,7 @@ async def executor(client: app, message: Message):
         )
         await message.reply_document(
             document=filename,
-            caption=f"<b>⥤ ᴇᴠᴀʟ :</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ ʀᴇsᴜʟᴛ :</b>\nAttached Document",
+            caption=f"<b>⥤ Değerlendirme:</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ ʀᴇsᴜʟᴛ :</b>\nAttached Document",
             quote=False,
             reply_markup=keyboard,
         )
@@ -139,7 +127,7 @@ async def forceclose_command(_, CallbackQuery):
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(
-                "» ɪᴛ'ʟʟ ʙᴇ ʙᴇᴛᴛᴇʀ ɪғ ʏᴏᴜ sᴛᴀʏ ɪɴ ʏᴏᴜʀ ʟɪᴍɪᴛs ʙᴀʙʏ.", show_alert=True
+                "» Sınırların İçinde Kalsan Daha İyi Olur Kardeşim.", show_alert=True
             )
         except:
             return
@@ -201,7 +189,7 @@ async def shellrunner(_, message: Message):
                 tb=exc_tb,
             )
             return await edit_or_reply(
-                message, text=f"<b>ERROR :</b>\n<pre>{''.join(errors)}</pre>"
+                message, text=f"<b>HATA :</b>\n<pre>{''.join(errors)}</pre>"
             )
         output = process.stdout.read()[:-1].decode("utf-8")
     if str(output) == "\n":

@@ -1,14 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with a variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collab if you have new ideas.
-"""
-
 from KlasikMuzik import app
 from pyrogram import filters
 from config import BANNED_USERS
@@ -32,7 +21,7 @@ async def playmode_(client, message: Message, _):
     query = message.text.split(None, 2)[1].lower().strip()
     if (str(query)).lower() == "disable":
         await set_cmode(message.chat.id, None)
-        return await message.reply_text("Channel Play Disabled")
+        return await message.reply_text("Kanal Oynatma Devre Dışı")
     elif str(query) == "linked":
         chat = await app.get_chat(message.chat.id)
         if chat.linked_chat:
@@ -47,7 +36,7 @@ async def playmode_(client, message: Message, _):
         try:
             chat = await app.get_chat(query)
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Hata: {e}")
             return await message.reply_text(_["cplay_4"])
         if chat.type != ChatType.CHANNEL:
             return await message.reply_text(_["cplay_5"])
@@ -59,7 +48,7 @@ async def playmode_(client, message: Message, _):
                     creatorusername = user.user.username
                     creatorid = user.user.id
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Hata: {e}")
             return await message.reply_text(_["cplay_4"])
         if creatorid != message.from_user.id:
             return await message.reply_text(

@@ -1,14 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
 from pyrogram import filters
 from pyrogram.types import Message
 from pytgcalls.exceptions import NoActiveGroupCall
@@ -47,11 +36,11 @@ async def stream_command(
             await Klasik.stream_call(url)
         except NoActiveGroupCall:
             await mystic.edit_text(
-                "ᴛʜᴇʀᴇ's ᴀɴ ɪssᴜᴇ ᴡɪᴛʜ ᴛʜᴇ ʙᴏᴛ. ᴘʟᴇᴀsᴇ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ ᴀɴᴅ ᴀsᴋ ᴛʜᴇᴍ ᴛᴏ ᴄʜᴇᴄᴋ ʟᴏɢɢᴇʀ ɢʀᴏᴜᴘ."
+                "**Botla İlgili Bir Sorun Var. Lütfen Sahibime Bildirin ve Log Grubunu Kontrol Etmesini İsteyin‌‌.**"
             )
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                "ᴘʟᴇᴀsᴇ ᴛᴜʀɴ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.. ʙᴏᴛ ɪs ɴᴏᴛ ᴀʙʟᴇ ᴛᴏ sᴛʀᴇᴀᴍ ᴜʀʟs..",
+                "Lütfen Görüntülü Sohbeti Açın.. Bot Akış Yapamıyor.‌‌",
             )
         except Exception as e:
             return await mystic.edit_text(_["general_3"].format(type(e).__name__))

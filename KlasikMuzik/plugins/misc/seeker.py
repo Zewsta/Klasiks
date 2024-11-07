@@ -1,15 +1,3 @@
-# Copyright (C) 2024 by Klasik_Help @ Github, < https://github.com/TheTeamKlasik >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Klasik © Yukki.
-
-""""
-TheTeamKlasik is a project of Telegram bots with variety of purposes.
-Copyright (c) 2024 -present Team=Klasik <https://github.com/TheTeamKlasik>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
-
 import asyncio
 
 from pyrogram.types import InlineKeyboardMarkup
@@ -93,7 +81,7 @@ async def markup_timer():
                         if len(members) <= 1:
                             autoend[chat_id] = datetime.now() + timedelta(seconds=60)
                     except Exception:
-                        pass  # Passing this for don't affect the below button edition function
+                        pass  # Bunu geçmek, aşağıdaki buton sürümü işlevini etkilemez
                 try:
                     buttons = (
                         stream_markup_timer(

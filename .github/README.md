@@ -1,4 +1,4 @@
-<h1 align="center"><b>❤️ Klasik Müzik ❤️</b></h1>
+<h1 align="center"><b>❤️ Klasik Müzik </b></h1>
 
 <h4 align="center">"Introducing Klasik Muzik – your smart, powerful, and simple bot for seamless audio and video playback on Telegram. Written in Python with the latest Pyrogram, Klasik Muzik delivers a superior entertainment experience. Upgrade now for optimal performance and a new level of Telegram enjoyment."<br> ... Working With Pyrogram Latest Version...</h4>
 

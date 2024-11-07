@@ -13,7 +13,7 @@ from KlasikMuzik.utils.inline.play import stream_markup, telegram_markup
 from KlasikMuzik.utils.stream.autoclear import auto_clean
 from KlasikMuzik.utils.thumbnails import gen_thumb
 
-# Commands
+# Komut
 SKIP_COMMAND = get_command("SKIP_COMMAND")
 
 
